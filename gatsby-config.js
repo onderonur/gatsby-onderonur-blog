@@ -109,7 +109,7 @@ module.exports = {
         background_color: `#fafafa`,
         theme_color: `#fff`,
         display: `standalone`,
-        icon: `static/assets/onderonur.png`,
+        icon: `static/assets/onderonur.jpg`,
       },
     },
     // To remove `gatsby-plugin-offline`

@@ -219,7 +219,7 @@ collections:
               - widget: image
                 name: image
                 label: image
-                default: /assets/onderonur.png
+                default: /assets/onderonur.jpg
               - widget: string
                 name: twitterUsername
                 label: Twitter
