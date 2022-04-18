@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../modules/layout/Layout';
-import { Box, Typography, styled } from '@mui/material';
+import { Typography, Stack, styled } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { HeaderOffset } from '../modules/layout/Header';
 import BackgroundImage from 'gatsby-background-image';
@@ -173,14 +173,14 @@ const HomePage = ({ data }) => {
                   fluid={image}
                   alt={`${frontmatter.title} - Featured image`}
                 />
-                <Box marginTop={2}>
-                  <Typography variant="h3" component="h1">
-                    <Bold>{frontmatter.title}</Bold>
-                  </Typography>
-                  <Tagline variant="h4">{frontmatter.tagline}</Tagline>
+                <Stack marginY={2} spacing={1} alignItems="center">
+                  <div>
+                    <Typography variant="h3" component="h1">
+                      <Bold>{frontmatter.title}</Bold>
+                    </Typography>
+                    <Tagline variant="h4">{frontmatter.tagline}</Tagline>
+                  </div>
                   <SocialAccounts />
-                </Box>
-                <Box marginY={2}>
                   <BaseButton
                     endIcon={<ExpandMoreIcon />}
                     variant="outlined"
@@ -193,7 +193,7 @@ const HomePage = ({ data }) => {
                   >
                     Find Out More
                   </BaseButton>
-                </Box>
+                </Stack>
               </HeroBannerContent>
             </HeroBanner>
           </HeroBgImage>
