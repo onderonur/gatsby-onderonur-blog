@@ -151,7 +151,7 @@ export default App;
 
 It should look like this now:
 
-![](/assets/glowing-images-01.png)
+![](/assets/glowing-images-01.jpg)
 
 Now we need to add the glow effect. As you can guess, we will use `GlowingImageRoot` to add the stylings.
 
@@ -220,7 +220,7 @@ const GlowingImageRoot = styled.div`
     z-index: -1;
     border-radius: inherit;
     /* You can change these values until it looks fine to you */
-    filter: blur(0.6rem) saturate(3);
+    filter: blur(0.6rem) saturate(2);
   }
 
   > img {
@@ -243,7 +243,7 @@ export default GlowingImage;
 
 We have a subtle glow now!
 
-![](/assets/glowing-images-02.png)
+![](/assets/glowing-images-02.jpg)
 
 To make it more visible, we can apply some scaling too. We can make the background image bigger by scaling it up, but I prefer making the original image slightly smaller like:
 
@@ -266,7 +266,7 @@ const GlowingImageRoot = styled.div`
     z-index: -1;
     border-radius: inherit;
     /* You can change these values until it looks fine to you */
-    filter: blur(0.6rem) saturate(3);
+    filter: blur(0.6rem) saturate(2);
   }
 
   > img {
@@ -290,7 +290,7 @@ export default GlowingImage;
 
 And it's done!
 
-![](/assets/glowing-images-03.png)
+![](/assets/glowing-images-03.jpg)
 
 To better understand this technique, we can make the original image non-visible temporarily and reveal our glowing image trick like:
 
@@ -313,7 +313,7 @@ const GlowingImageRoot = styled.div`
     z-index: -1;
     border-radius: inherit;
     /* You can change these values until it looks fine to you */
-    filter: blur(0.6rem) saturate(3);
+    filter: blur(0.6rem) saturate(2);
   }
 
   > img {
@@ -367,7 +367,7 @@ const GlowingImageRoot = styled.div`
     z-index: -1;
     border-radius: inherit;
     /* You can change these values until it looks fine to you */
-    filter: blur(0.6rem) saturate(3);
+    filter: blur(0.6rem) saturate(2);
   }
 
   &:hover {

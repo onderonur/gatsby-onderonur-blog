@@ -6,7 +6,7 @@ date: 2020-10-12 11:51
 description: State management for React applications is a concept with a lot of
   alternative solutions. We have things like redux, mobx, mobx-state-tree,
   apollo-client and many more. They all have many different…
-featuredImage: /assets/1_st54r7_l-6gftrzfygd0eq.png
+featuredImage: /assets/1_st54r7_l-6gftrzfygd0eq.jpg
 ---
 
 State management for React applications is a concept with a lot of alternative solutions. We have things like [redux](https://redux.js.org/), [mobx](https://mobx.js.org/README.html), [mobx-state-tree](https://mobx-state-tree.js.org/intro/philosophy), [apollo-client](https://www.apollographql.com/docs/react/) and many more. They all have many different and similar approaches, learning curves, complexities and simplicities. They are very very useful for many situations. But I think, they add a lot of unnecessary layers for a lot of applications. Because, you already have a state management solution and it’s built-in to React. It’s React itself…
@@ -148,11 +148,11 @@ npm start
 
 The result should look like this.
 
-![](/assets/state-management-01.png)
+![](/assets/state-management-01.jpg)
 
 Click the buttons and the count will be increased or decreased. Everything works as expected.
 
-![](/assets/state-management-02.png)
+![](/assets/state-management-02.jpg)
 
 And also, we created a simple structure with Context and hooks to prevent prop drilling. We could do it the other way. It wouldn’t be hard for a simple application like this. But when you create real world applications, it can easily go unmaintainable.
 
@@ -245,7 +245,7 @@ export default CountIncreaser;
 
 Now click the buttons a few times and look at the console output again;
 
-![](/assets/state-management-03.png)
+![](/assets/state-management-03.jpg)
 
 Only the `Count` component is re-rendering and this is exactly what we wanted. Nice!
 
@@ -386,7 +386,7 @@ Now, we don’t need to use `React.memo` with every context connected component.
 
 Let’s click the buttons and look at the console output again;
 
-![](/assets/state-management-04.png)
+![](/assets/state-management-04.jpg)
 
 We have the exact same output as the first performance optimization option. Cool!
 
@@ -485,7 +485,7 @@ export { useCount, useIncrease, useDecrease };
 export default CounterProvider;
 ```
 
-![](/assets/state-management-05.png)
+![](/assets/state-management-05.jpg)
 
 Exactly the same output as the other two options.
 
