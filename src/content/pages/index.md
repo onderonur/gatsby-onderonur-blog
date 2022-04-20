@@ -115,7 +115,7 @@ projects:
       - name: React
   - title: Post Gallery
     description:
-      Fullstack GraphQL web application that implements basic features of
+      Full stack GraphQL web application that implements basic features of
       9GAG. Built w/ TypeScript, Next.js, Apollo Server, Apollo Client,
       PostgreSQL
     featuredImage: /assets/project-postgallery.jpg
@@ -159,7 +159,7 @@ projects:
       - name: Apollo GraphQL
   - title: Bubbly
     description:
-      Dynamic chat application created w/ Socket.IO, React, TypeScript,
+      Full stack chat application created w/ Socket.IO, React, TypeScript,
       Next.js and Express
     featuredImage: /assets/project-bubbly.jpg
     demoUrl: https://bubbly-chat.herokuapp.com/

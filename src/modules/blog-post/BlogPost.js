@@ -74,6 +74,10 @@ function BlogPost({ data, pageContext }) {
     next,
   };
 
+  const shareButtons = (
+    <BlogPostShareButtons siteUrl={site.siteMetadata.siteUrl} />
+  );
+
   return (
     <>
       <SEO
@@ -98,7 +102,7 @@ function BlogPost({ data, pageContext }) {
               <time>{frontmatter.date}</time> · {fields.readingTime.text}
             </Typography>
           </ArticleHeader>
-          <BlogPostShareButtons siteUrl={site.siteMetadata.siteUrl} />
+          {shareButtons}
           {featuredImage && (
             <StyledFigure>
               <FeaturedImage
@@ -119,7 +123,7 @@ function BlogPost({ data, pageContext }) {
 
         <BlogPostContent html={html} />
 
-        <BlogPostShareButtons />
+        {shareButtons}
       </StyledArticle>
       {(previous || next) && <BlogPostPagination {...props} />}
     </>

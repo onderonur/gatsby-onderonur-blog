@@ -104,7 +104,7 @@ import { useCounterContext } from './CounterProvider';
 function CountIncreaser() {
   const { increase } = useCounterContext();
   console.log('CountIncreaser');
-  return <button onClick={increase}>+ Increate</button>;
+  return <button onClick={increase}>+ Increase</button>;
 }
 
 export default CountIncreaser;
@@ -237,7 +237,7 @@ import React from 'react';
 
 const CountIncreaser = React.memo(({ increase }) => {
   console.log('CountIncreaser');
-  return <button onClick={increase}>+ Increate</button>;
+  return <button onClick={increase}>+ Increase</button>;
 });
 
 export default CountIncreaser;
@@ -356,7 +356,7 @@ import { useCountActionsContext } from './CountActionsProvider';
 function CountIncreaser() {
   const { increase } = useCountActionsContext();
   console.log('CountIncreaser');
-  return <button onClick={increase}>+ Increate</button>;
+  return <button onClick={increase}>+ Increase</button>;
 }
 
 export default CountIncreaser;
@@ -442,7 +442,7 @@ export default Count;
 ```
 
 ```javascript
-// src/CountDecrease.js
+// src/CountDecreaser.js
 import React from 'react';
 import { useDecrease } from './CounterProvider';
 
@@ -463,7 +463,7 @@ import { useIncrease } from './CounterProvider';
 function CountIncreaser() {
   const increase = useIncrease();
   console.log('CountIncreaser');
-  return <button onClick={increase}>+ Increate</button>;
+  return <button onClick={increase}>+ Increase</button>;
 }
 
 export default CountIncreaser;
