@@ -77,8 +77,7 @@ experience:
   - dateRange: October 2017 - May 2018
     jobTitle: Part - Time Software Developer
     company: Arkas Holding - Bimar Bilgi İşlem Hizmetleri A.Ş.
-    description:
-      Multiple projects with React, .Net Core, ASP.NET MVC and Microsoft
+    description: Multiple projects with React, .Net Core, ASP.NET MVC and Microsoft
       SQL Server
     location: İzmir, Turkey
   - dateRange: July 2017
@@ -87,20 +86,20 @@ experience:
     description: Small projects with ASP.NET MVC and Toad for Oracle
     location: İzmir, Turkey
 education:
-  - startYear: '2015'
-    endYear: '2018'
+  - startYear: "2015"
+    endYear: "2018"
     school: Ege University
     fieldOfStudy: Computer Engineering
     grade: 3.47 / 4.00 GPA
     location: İzmir, Turkey
-  - startYear: '2009'
-    endYear: '2013'
+  - startYear: "2009"
+    endYear: "2013"
     school: Ege University
     fieldOfStudy: Civil Engineering
     grade: 3.17 / 4.00 GPA
     location: İzmir, Turkey
-  - startYear: '2005'
-    endYear: '2009'
+  - startYear: "2005"
+    endYear: "2009"
     school: İzmir Milli Piyango Anatolian High School
     location: İzmir, Turkey
 projects:
@@ -114,9 +113,8 @@ projects:
       - name: Remix
       - name: React
   - title: Post Gallery
-    description:
-      Full stack GraphQL web application that implements basic features of
-      9GAG. Built w/ TypeScript, Next.js, Apollo Server, Apollo Client,
+    description: Full stack GraphQL web application that implements basic features
+      of 9GAG. Built w/ TypeScript, Next.js, Apollo Server, Apollo Client,
       PostgreSQL
     featuredImage: /assets/project-postgallery.jpg
     sourceCodeUrl: https://github.com/onderonur/post-gallery
@@ -146,8 +144,7 @@ projects:
       - name: React
       - name: MongoDB
   - title: RickQL
-    description:
-      Client app for Rick and Morty API w/ TypeScript, Next.js, React &
+    description: Client app for Rick and Morty API w/ TypeScript, Next.js, React &
       Apollo GraphQL
     featuredImage: /assets/project-rickql.jpg
     demoUrl: https://rick-and-morty-graphql.now.sh/
@@ -158,9 +155,8 @@ projects:
       - name: React
       - name: Apollo GraphQL
   - title: Bubbly
-    description:
-      Full stack chat application created w/ Socket.IO, React, TypeScript,
-      Next.js and Express
+    description: Full stack chat application created w/ Socket.IO, React,
+      TypeScript, Next.js and Express
     featuredImage: /assets/project-bubbly.jpg
     demoUrl: https://bubbly-chat.herokuapp.com/
     sourceCodeUrl: https://github.com/onderonur/bubbly
@@ -171,8 +167,7 @@ projects:
       - name: Express.js
       - name: Socket.IO
   - title: Bubbly-Flask
-    description:
-      Clone of my own project "bubbly", with a python (flask) API created
+    description: Clone of my own project "bubbly", with a python (flask) API created
       w/ flask-socketio
     featuredImage: /assets/project-bubbly.jpg
     sourceCodeUrl: https://github.com/onderonur/bubbly-flask
@@ -273,14 +268,17 @@ projects:
       - name: CSS
       - name: SVG
 cta:
-  ctaText: '  '
-  ctaLink: '  '
+  ctaText: "  "
+  ctaLink: "  "
 ---
-
 Hi! I'm Onur Önder. Glad to see you here!
 
-I'm a software developer from İzmir, Turkey. During my education at Ege University Civil Engineering and after graduation, I've developed a love for coding. To turn this love into a profession, I've started Ege University Computer Engineering in 2015 and graduated in 2018.
+I'm a software developer from İzmir, Turkey. Between 2009 and 2013, I gained a great interest in programming during my education at Ege University Civil Engineering Department and after my graduation. In 2015, I started Ege University Computer Engineering Department in order to turn this interest into a professional gain and graduated in 2018.
 
-In the last year of university, I've started to work as an intern at Arkas Holding - Bimar and continued working there as a part-time developer, junior developer and lastly a mid-level developer. At work, we generally use React, React Native, .Net Core and MSSQL with Microsoft technologies like Azure & Azure DevOps. In addition to these, I mostly prefer Node.js (Express, Socket.IO, Next.js, Nest.js, Gatsby, etc.) and GraphQL for my personal projects. I try to contribute to the open source community. When I believe that something I'm using may be needed by other developers, I publish it as a package. It helps to find bugs or add new features by collaborating with other developers.
+At Arkas Holding - Bimar, where I started working as an intern in the last year of my university life, I continued to work for 4 years until I became a mid-level software developer. At Bimar, I took a role in the development of enterprise web and mobile applications with the help of technologies/tools such as TypeScript, JavaScript, React, React Native, .NET Core, MSSQL, Git, Azure and Azure DevOps in a team that follows the Agile/Scrum methodologies.
 
-I also spend some time improving my knowledge of languages like Python and Go too. I believe that occasionally trying different languages, frameworks or tools can give a developer a different perspective to solve problems effectively.
+As of September 2021, I continue my work as a Frontend Developer in the web team of Getir. I'm mostly working on JavaScript, TypeScript, React, Next.js and similar frontend technologies.
+
+In my spare time, I contribute to my own development by carrying out projects with technologies such as Node.js (Express, Next.js, Socket.IO etc.), GraphQL, and I try to take part in the open-source community by publishing these projects on GitHub and npm.
+
+I also develop small-scale projects in languages ​​such as Python and Go, as I believe that experiencing different frameworks and programming languages ​​can bring different perspectives to a software developer.
