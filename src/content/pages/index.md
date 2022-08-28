@@ -133,16 +133,16 @@ projects:
       - name: TypeScript
       - name: Next.js
       - name: React
-  - title: OnUrl
-    description: URL Shortener created w/ Next.js, TypeScript, Mongoose
-    featuredImage: /assets/project-onurl.jpg
-    demoUrl: https://onurl.vercel.app/
-    sourceCodeUrl: https://github.com/onderonur/onurl
+  - title: Next Shopper
+    description: A simple e-commerce web application built with Next.js
+    featuredImage: /assets/project-nextshopper.jpg
+    demoUrl: https://next-shopper.vercel.app/
+    sourceCodeUrl: https://github.com/onderonur/next-shopper
     techStack:
       - name: TypeScript
       - name: Next.js
       - name: React
-      - name: MongoDB
+      - name: Tailwind CSS
   - title: RickQL
     description: Client app for Rick and Morty API w/ TypeScript, Next.js, React &
       Apollo GraphQL
@@ -154,6 +154,16 @@ projects:
       - name: Next.js
       - name: React
       - name: Apollo GraphQL
+  - title: OnUrl
+    description: URL Shortener created w/ Next.js, TypeScript, Mongoose
+    featuredImage: /assets/project-onurl.jpg
+    demoUrl: https://onurl.vercel.app/
+    sourceCodeUrl: https://github.com/onderonur/onurl
+    techStack:
+      - name: TypeScript
+      - name: Next.js
+      - name: React
+      - name: MongoDB
   - title: Bubbly
     description: Full stack chat application created w/ Socket.IO, React,
       TypeScript, Next.js and Express
@@ -177,16 +187,6 @@ projects:
       - name: Python
       - name: Flask
       - name: Socket.IO
-  - title: Next Shopper
-    description: A simple e-commerce web application built with Next.js
-    featuredImage: /assets/project-nextshopper.jpg
-    demoUrl: https://next-shopper.vercel.app/
-    sourceCodeUrl: https://github.com/onderonur/next-shopper
-    techStack:
-      - name: TypeScript
-      - name: Next.js
-      - name: React
-      - name: Tailwind CSS
   - title: Nuxt Heroes & Villains
     description: A small web app to list various characters from comics, movies, etc.
     demoUrl: https://onderonur.github.io/nuxt-heroes-and-villains/
@@ -197,6 +197,14 @@ projects:
       - name: Vue.js
       - name: Tailwind CSS
     featuredImage: /assets/project-nuxtheroesandvillains.jpg
+  - title: svelte-github-explorer
+    description: A simple Svelte app to explore users and their repositories on GitHub
+    featuredImage: /assets/project-sveltegithubexplorer.png
+    demoUrl: https://onderonur.github.io/svelte-github-explorer
+    sourceCodeUrl: https://github.com/onderonur/svelte-github-explorer
+    techStack:
+      - name: SvelteKit
+      - name: Svelte
   - title: Onur Önder - Blog
     description: Personal website & blog. Built w/ Gatsby & Netlify CMS
     featuredImage: /assets/project-onderonurblog.jpg
