@@ -159,7 +159,7 @@ const HomePage = ({ data }) => {
 
   return (
     <>
-      <SEO />
+      <SEO title="Home" />
       <Layout
         hero={
           <HeroBgImage
