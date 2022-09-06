@@ -17,9 +17,15 @@ function EducationTimeline({ items }) {
             subtitle={item.fieldOfStudy}
             location={item.location}
             content={
-              <Typography variant="subtitle2" color="textSecondary">
-                {item.grade}
-              </Typography>
+              item.grade && (
+                <Typography
+                  variant="subtitle2"
+                  component="div"
+                  color="textSecondary"
+                >
+                  {item.grade}
+                </Typography>
+              )
             }
           />
         );

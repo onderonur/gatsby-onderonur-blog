@@ -50,16 +50,18 @@ export function TimelineItem({
         color: '#fff',
       }}
     >
-      <Typography variant="h6" component="h3">
+      <Typography variant="h6" component="div">
         <Bold>{title}</Bold>
       </Typography>
-      <Typography variant="subtitle2">{subtitle}</Typography>
+      <Typography variant="subtitle2" component="div">
+        {subtitle}
+      </Typography>
       {location && (
-        <Typography variant="subtitle2" color="textSecondary">
+        <Typography variant="subtitle2" component="div" color="textSecondary">
           {location}
         </Typography>
       )}
-      <div>{content}</div>
+      {content && <div>{content}</div>}
     </StyledVerticalTimelineElement>
   );
 }

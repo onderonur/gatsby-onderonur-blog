@@ -16,9 +16,13 @@ function ExperienceTimeline({ items }) {
             subtitle={item.company}
             location={item.location}
             content={
-              <Box marginTop={1}>
-                <Typography variant="subtitle2">{item.description}</Typography>
-              </Box>
+              item.description && (
+                <Box marginTop={1}>
+                  <Typography variant="subtitle2" component="p">
+                    {item.description}
+                  </Typography>
+                </Box>
+              )
             }
           />
         );

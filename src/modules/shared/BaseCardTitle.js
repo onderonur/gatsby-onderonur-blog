@@ -4,7 +4,7 @@ import { Bold } from './StyledUtils';
 
 function BaseCardTitle({ children }) {
   return (
-    <Typography variant="subtitle1" component="h2">
+    <Typography variant="subtitle1" component="div">
       <Bold>{children}</Bold>
     </Typography>
   );
