@@ -56,7 +56,7 @@ skills:
   - name: Agile Development
     icon: /assets/skill-icon-agiledevelopment.jpg
 experience:
-  - dateRange: September 2021 - Present
+  - dateRange: September 2021 - September 2022
     jobTitle: Frontend Developer
     company: Getir
     location: İzmir, Turkey
