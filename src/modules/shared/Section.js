@@ -11,15 +11,15 @@ const StyledTypography = styled(Typography)({
 });
 
 const SectionTitle = React.forwardRef(function SectionTitle(
-  { children, ...rest },
+  { children, component = 'h2', ...rest },
   ref,
 ) {
   return (
     <StyledTypography
       ref={ref}
       {...rest}
+      component={component}
       variant="h4"
-      component="h2"
       gutterBottom
     >
       <Bold>{children}</Bold>
@@ -35,7 +35,10 @@ const StyledFade = styled(Fade)`
   scroll-margin-top: ${scrollMarginTop};
 `;
 
-const Section = React.forwardRef(function Section({ title, children }, ref) {
+const Section = React.forwardRef(function Section(
+  { title, titleComponent, children },
+  ref,
+) {
   const [observerRef, { wasEverVisible }] = useTrackVisibility();
 
   const sectionSlug = slugify(title, { lower: true });
@@ -53,7 +56,9 @@ const Section = React.forwardRef(function Section({ title, children }, ref) {
     >
       <Box marginTop={3} marginBottom={4}>
         <StyledAnchor href={`#${sectionSlug}`}>
-          <SectionTitle id={sectionSlug}>{title}</SectionTitle>
+          <SectionTitle id={sectionSlug} component={titleComponent}>
+            {title}
+          </SectionTitle>
         </StyledAnchor>
         {children}
       </Box>

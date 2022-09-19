@@ -85,7 +85,7 @@ function BlogPosts({ data, pageContext }) {
         title={`Blog - Page ${currentPage} of ${pagesCount}`}
         description={`Onur Önder's blog page ${currentPage} of ${pagesCount}`}
       />
-      <Section title="Blog">
+      <Section title="Blog" titleComponent="h1">
         <GridList
           data={postEdges}
           getItemKey={(edge) => edge.node.id}
