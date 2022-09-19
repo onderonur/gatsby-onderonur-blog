@@ -6,27 +6,21 @@ import GatsbyLink from '../shared/GatsbyLink';
 
 function BlogPostCard({ data }) {
   return (
-    <GatsbyLink to={data.fields.route}>
-      <Card>
-        <CardActionArea>
-          <BaseCardMedia
-            src={data.frontmatter.featuredImage?.childImageSharp.fluid}
-            alt={`${data.frontmatter.title} - Featured Image`}
-          />
-          <CardContent>
-            <BaseCardTitle>{data.frontmatter.title}</BaseCardTitle>
-            <Typography
-              component="time"
-              variant="subtitle2"
-              color="textSecondary"
-            >
-              <time>{data.frontmatter.date}</time> ·{' '}
-              {data.fields.readingTime.text}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-    </GatsbyLink>
+    <Card>
+      <CardActionArea LinkComponent={GatsbyLink} to={data.fields.route}>
+        <BaseCardMedia
+          src={data.frontmatter.featuredImage?.childImageSharp.fluid}
+          alt={`${data.frontmatter.title} - Featured Image`}
+        />
+        <CardContent>
+          <BaseCardTitle>{data.frontmatter.title}</BaseCardTitle>
+          <Typography component="p" variant="subtitle2" color="textSecondary">
+            <time>{data.frontmatter.date}</time> ·{' '}
+            {data.fields.readingTime.text}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 }
 

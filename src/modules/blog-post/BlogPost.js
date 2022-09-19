@@ -94,11 +94,7 @@ function BlogPost({ data, pageContext }) {
             <Typography component="h1" variant="h4">
               <Bold>{frontmatter.title}</Bold>
             </Typography>
-            <Typography
-              component="time"
-              color="textSecondary"
-              variant="subtitle2"
-            >
+            <Typography component="p" color="textSecondary" variant="subtitle2">
               <time>{frontmatter.date}</time> · {fields.readingTime.text}
             </Typography>
           </ArticleHeader>
