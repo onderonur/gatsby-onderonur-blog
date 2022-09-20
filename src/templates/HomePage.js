@@ -178,7 +178,7 @@ const HomePage = ({ data }) => {
                     <Typography variant="h3" component="h1">
                       <Bold>{frontmatter.title}</Bold>
                     </Typography>
-                    <Tagline variant="h4" component="div">
+                    <Tagline variant="h4" component="p">
                       {frontmatter.tagline}
                     </Tagline>
                   </div>

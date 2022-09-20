@@ -49,7 +49,7 @@ function LatestBlogPosts() {
         );
 
         return (
-          <section>
+          <div>
             <BlogPostCardList postEdges={postEdges} />
             <Box marginTop={3} display="flex" justifyContent="flex-end">
               <BaseButton
@@ -62,7 +62,7 @@ function LatestBlogPosts() {
                 See more
               </BaseButton>
             </Box>
-          </section>
+          </div>
         );
       }}
     />

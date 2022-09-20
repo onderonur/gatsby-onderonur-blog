@@ -47,7 +47,7 @@ const BlogPostContent = styled(HtmlRenderer)(({ theme }) => ({
   },
 }));
 
-const ArticleHeader = styled('section')(({ theme }) => ({
+const ArticleHeading = styled('div')(({ theme }) => ({
   padding: theme.spacing(4, 0, 1, 0),
   textAlign: 'center',
 }));
@@ -90,14 +90,14 @@ function BlogPost({ data, pageContext }) {
       />
       <StyledArticle>
         <header>
-          <ArticleHeader>
+          <ArticleHeading>
             <Typography component="h1" variant="h4">
               <Bold>{frontmatter.title}</Bold>
             </Typography>
             <Typography component="p" color="textSecondary" variant="subtitle2">
               <time>{frontmatter.date}</time> · {fields.readingTime.text}
             </Typography>
-          </ArticleHeader>
+          </ArticleHeading>
           {shareButtons}
           {featuredImage && (
             <StyledFigure>

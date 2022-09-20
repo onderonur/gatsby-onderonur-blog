@@ -54,12 +54,10 @@ const Section = React.forwardRef(function Section(
       in={wasEverVisible}
       timeout={1000}
     >
-      <Box marginTop={3} marginBottom={4}>
-        <StyledAnchor href={`#${sectionSlug}`}>
-          <SectionTitle id={sectionSlug} component={titleComponent}>
-            {title}
-          </SectionTitle>
-        </StyledAnchor>
+      <Box component="section" marginTop={3} marginBottom={4}>
+        <SectionTitle id={sectionSlug} component={titleComponent}>
+          <StyledAnchor href={`#${sectionSlug}`}>{title}</StyledAnchor>
+        </SectionTitle>
         {children}
       </Box>
     </StyledFade>
