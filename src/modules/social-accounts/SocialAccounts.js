@@ -19,7 +19,7 @@ const query = graphql`
   }
 `;
 
-function SocialAccountLink({ url, icon }) {
+function SocialAccountLink({ ['aria-label']: ariaLabel, url, icon }) {
   if (!url) {
     return null;
   }
@@ -32,6 +32,7 @@ function SocialAccountLink({ url, icon }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={ariaLabel}
     >
       <Icon />
     </IconButton>
@@ -49,16 +50,23 @@ function SocialAccounts() {
       <SocialAccountLink
         icon={TwitterIcon}
         url={`https://twitter.com/${twitterUsername}`}
+        aria-label="Twitter Profile"
       />
       <SocialAccountLink
         icon={GitHubIcon}
         url={`https://github.com/${githubUsername}`}
+        aria-label="GitHub Profile"
       />
       <SocialAccountLink
         icon={LinkedInIcon}
         url={`https://linkedin.com/in/${linkedinUsername}`}
+        aria-label="LinkedIn Profile"
       />
-      <SocialAccountLink icon={MailIcon} url={`mailto:${mail}`} />
+      <SocialAccountLink
+        icon={MailIcon}
+        url={`mailto:${mail}`}
+        aria-label="Send E-Mail"
+      />
     </Stack>
   );
 }
