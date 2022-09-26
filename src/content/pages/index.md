@@ -2,7 +2,7 @@
 template: HomePage
 slug: /
 title: Onur Önder
-tagline: Software Developer
+tagline: Frontend Developer
 featuredImage: /assets/me.jpg
 skills:
   - name: React
@@ -56,6 +56,10 @@ skills:
   - name: Agile Development
     icon: /assets/skill-icon-agiledevelopment.jpg
 experience:
+  - dateRange: September 2022 - Present
+    jobTitle: Senior Frontend Developer
+    company: Delivery Hero
+    location: İzmir, Turkey
   - dateRange: September 2021 - September 2022
     jobTitle: Frontend Developer
     company: Getir
