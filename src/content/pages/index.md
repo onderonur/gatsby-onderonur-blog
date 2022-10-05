@@ -200,7 +200,7 @@ projects:
       - name: Nuxt.js
       - name: Vue.js
       - name: Tailwind CSS
-    featuredImage: /assets/project-nuxtheroesandvillains.jpg
+    featuredImage: /assets/project-nuxtheroesandvillains.png
   - title: svelte-github-explorer
     description: A simple Svelte app to explore users and their repositories on GitHub
     featuredImage: /assets/project-sveltegithubexplorer.png
