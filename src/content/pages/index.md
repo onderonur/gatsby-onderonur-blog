@@ -139,7 +139,7 @@ projects:
       - name: React
   - title: Next Shopper
     description: A simple e-commerce web application built with Next.js
-    featuredImage: /assets/project-nextshopper.jpg
+    featuredImage: /assets/project-nextshopper.png
     demoUrl: https://next-shopper.vercel.app/
     sourceCodeUrl: https://github.com/onderonur/next-shopper
     techStack:
