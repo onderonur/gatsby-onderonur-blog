@@ -2,11 +2,33 @@ import React from 'react';
 import { Typography } from '@mui/material';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import { Timeline, TimelineItem } from '../shared/Timeline';
+import { graphql, useStaticQuery } from 'gatsby';
 
-function EducationTimeline({ items }) {
+function EducationTimeline() {
+  const {
+    markdownRemark: {
+      frontmatter: { education },
+    },
+  } = useStaticQuery(graphql`
+    query EducationQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/common/education.md/" }) {
+        frontmatter {
+          education {
+            startYear
+            endYear
+            school
+            fieldOfStudy
+            grade
+            location
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Timeline>
-      {items.map((item) => {
+      {education.map((item) => {
         const dateRange = `${item.startYear} - ${item.endYear}`;
         return (
           <TimelineItem

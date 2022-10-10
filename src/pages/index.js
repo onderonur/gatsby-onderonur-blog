@@ -19,7 +19,7 @@ import ExperienceTimeline from '../modules/experience/ExperienceTimeline';
 import SocialAccounts from '../modules/social-accounts/SocialAccounts';
 
 export const pageQuery = graphql`
-  query HomeQuery($route: String!) {
+  query HomeQuery {
     heroImage: file(relativePath: { eq: "hero-image.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
@@ -27,12 +27,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(fields: { route: { eq: $route } }) {
+    markdownRemark(fileAbsolutePath: { regex: "/common/author.md/" }) {
       id
       html
-      fields {
-        route
-      }
       frontmatter {
         title
         tagline
@@ -47,48 +44,6 @@ export const pageQuery = graphql`
             ) {
               ...GatsbyImageSharpFluid
             }
-          }
-        }
-        skills {
-          icon {
-            childImageSharp {
-              fixed(width: 30, height: 30, quality: 80, cropFocus: CENTER) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-          name
-        }
-        experience {
-          dateRange
-          jobTitle
-          company
-          description
-          location
-        }
-        education {
-          startYear
-          endYear
-          school
-          fieldOfStudy
-          grade
-          location
-        }
-        projects {
-          title
-          description
-          featuredImage {
-            childImageSharp {
-              fluid(quality: 80) {
-                ...GatsbyImageSharpFluid
-                ...GatsbyImageSharpFluidLimitPresentationSize
-              }
-            }
-          }
-          demoUrl
-          sourceCodeUrl
-          techStack {
-            name
           }
         }
       }
@@ -148,8 +103,8 @@ const HeroBannerContent = styled('div')(({ theme }) => ({
   },
 }));
 
-const HomePage = ({ data }) => {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
+function HomePage({ data }) {
+  const { markdownRemark, heroImage } = data;
   const { frontmatter, html } = markdownRemark;
   const image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.fluid
@@ -162,10 +117,7 @@ const HomePage = ({ data }) => {
       <SEO title="Home" />
       <Layout
         hero={
-          <HeroBgImage
-            Tag="section"
-            fluid={data.heroImage.childImageSharp.fluid}
-          >
+          <HeroBgImage Tag="section" fluid={heroImage.childImageSharp.fluid}>
             <HeroBanner>
               <HeaderOffset />
               <HeroBannerContent>
@@ -205,16 +157,16 @@ const HomePage = ({ data }) => {
           <HtmlRenderer html={html} />
         </Section>
         <Section title="Skills">
-          <SkillsList skills={frontmatter.skills} />
+          <SkillsList />
         </Section>
         <Section title="Experience">
-          <ExperienceTimeline items={frontmatter.experience} />
+          <ExperienceTimeline />
         </Section>
         <Section title="Education">
-          <EducationTimeline items={frontmatter.education} />
+          <EducationTimeline />
         </Section>
         <Section title="Projects">
-          <ProjectCardList projects={frontmatter.projects} />
+          <ProjectCardList />
         </Section>
         <Section title="Latest in Blog">
           <LatestBlogPosts />
@@ -222,6 +174,6 @@ const HomePage = ({ data }) => {
       </Layout>
     </>
   );
-};
+}
 
 export default HomePage;

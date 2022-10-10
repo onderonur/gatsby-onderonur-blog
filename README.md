@@ -2,7 +2,7 @@
 
 # onderonur-blog
 
-Personal website and blog, built w/ [Gatsby][gatsby] and [Netlify CMS][netlifycms].  
+Personal website and blog, built with [Gatsby][gatsby] and [Netlify CMS][netlifycms].  
 Live site is **[here](https://onderonur.netlify.app/)**.  
 Created by moderately modifying [gatsby-started-foundation](https://www.gatsbyjs.com/starters/stackrole/gatsby-starter-foundation/).
 

@@ -2,11 +2,32 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import { Timeline, TimelineItem } from '../shared/Timeline';
+import { graphql, useStaticQuery } from 'gatsby';
 
-function ExperienceTimeline({ items }) {
+function ExperienceTimeline() {
+  const {
+    markdownRemark: {
+      frontmatter: { experience },
+    },
+  } = useStaticQuery(graphql`
+    query ExperienceQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/common/experience.md/" }) {
+        frontmatter {
+          experience {
+            dateRange
+            jobTitle
+            company
+            description
+            location
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Timeline>
-      {items.map((item) => {
+      {experience.map((item) => {
         return (
           <TimelineItem
             key={item.dateRange}

@@ -57,6 +57,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const { route } = post.node.fields;
 
+    // TODO: Fix this
+    if (!post.node.frontmatter.template) {
+      return;
+    }
+
     createPage({
       path: route,
       component: path.resolve(

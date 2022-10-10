@@ -59,34 +59,13 @@ collections:
         name: body
         widget: markdown
         hint: Main content goes here.
-  - label: Pages
-    name: pages
+  - name: common
+    label: Common
     files:
-      - label: Home
-        name: home
-        file: src/content/pages/index.md
+      - label: Skills
+        name: skills
+        file: src/content/common/skills.md
         fields:
-          - label: Template
-            name: template
-            widget: hidden
-            default: HomePage
-          - label: Slug
-            name: slug
-            widget: hidden
-            default: /
-          - label: Title
-            name: title
-            widget: string
-          - label: Tagline
-            name: tagline
-            widget: string
-          - label: Featured Image
-            name: featuredImage
-            widget: image
-            required: false
-          - label: 'Body'
-            name: 'body'
-            widget: 'markdown'
           - label: Skills
             name: skills
             widget: list
@@ -99,6 +78,10 @@ collections:
               - name: name
                 label: Name
                 widget: string
+      - label: 'Experience'
+        name: 'experience'
+        file: src/content/common/experience.md
+        fields:
           - label: 'Experience'
             name: 'experience'
             widget: 'list'
@@ -121,8 +104,12 @@ collections:
                 label: 'Location'
                 widget: 'string'
                 required: false
-          - label: 'Education'
-            name: 'education'
+      - label: 'Education'
+        name: 'education'
+        file: src/content/common/education.md
+        fields:
+          - label: Education
+            name: education
             widget: 'list'
             summary: '{{school}} - {{fieldOfStudy}}'
             fields:
@@ -147,6 +134,10 @@ collections:
                 label: 'Location'
                 widget: 'string'
                 required: false
+      - label: Projects
+        name: projects
+        file: src/content/common/projects.md
+        fields:
           - label: Projects
             name: projects
             widget: list
@@ -177,16 +168,23 @@ collections:
                   - name: name
                     label: Name
                     widget: string
-          - label: 'CTA'
-            name: 'cta'
-            widget: 'object'
-            fields:
-              - name: 'ctaText'
-                label: 'CTA text'
-                widget: 'string'
-              - name: 'ctaLink'
-                label: 'CTA Link'
-                widget: 'string'
+      - label: Author
+        name: author
+        file: src/content/common/author.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Tagline
+            name: tagline
+            widget: string
+          - label: Featured Image
+            name: featuredImage
+            widget: image
+            required: false
+          - label: 'Body'
+            name: 'body'
+            widget: 'markdown'
   - name: settings
     label: Settings
     files:

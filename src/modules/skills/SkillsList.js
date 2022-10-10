@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import { Avatar, Box, Grid, styled } from '@mui/material';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const skillAvatarStyle = {
   size: 30,
@@ -23,7 +24,30 @@ const SkillAvatarOffset = styled('div')(({ theme }) => ({
   ...skillAvatarBaseStyle({ theme }),
 }));
 
-const SkillsList = ({ skills }) => {
+function SkillsList() {
+  const {
+    markdownRemark: {
+      frontmatter: { skills },
+    },
+  } = useStaticQuery(graphql`
+    query SkillsQuery {
+      markdownRemark(fileAbsolutePath: { regex: "/common/skills.md/" }) {
+        frontmatter {
+          skills {
+            icon {
+              childImageSharp {
+                fixed(width: 30, height: 30, quality: 80, cropFocus: CENTER) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            name
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Grid container spacing={2}>
       {skills.map((skill) => {
@@ -46,6 +70,6 @@ const SkillsList = ({ skills }) => {
       })}
     </Grid>
   );
-};
+}
 
 export default SkillsList;
