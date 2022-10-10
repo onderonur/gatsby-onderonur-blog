@@ -27,6 +27,11 @@ const SEO = ({ title, description, imageSrc, article }) => {
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <html lang="en-US" />
+      {/* Google Search Console Verification */}
+      <meta
+        name="google-site-verification"
+        content="nQgOxm5VNGFj7ASyvph9w0k05oxvl67a2Pt3V442MrQ"
+      />
       <link rel="alternate" href={seo.url} hrefLang="en-us" />
       <link rel="alternate" href={seo.url} hrefLang="en" />
       <link rel="alternate" href={seo.url} hrefLang="x-default" />
