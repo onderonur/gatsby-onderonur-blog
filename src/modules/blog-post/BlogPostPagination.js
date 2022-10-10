@@ -9,7 +9,7 @@ function BlogPostPagination({ previous, next }) {
       <Box marginY={2}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            {previous && previous.frontmatter.template === 'BlogPostPage' && (
+            {previous && (
               <PaginationLink
                 direction="previous"
                 to={previous.fields.route}
@@ -18,7 +18,7 @@ function BlogPostPagination({ previous, next }) {
             )}
           </Grid>
           <Grid item xs={12} sm={6}>
-            {next && next.frontmatter.template === 'BlogPostPage' && (
+            {next && (
               <PaginationLink
                 direction="next"
                 to={next.fields.route}

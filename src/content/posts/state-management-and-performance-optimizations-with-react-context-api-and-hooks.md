@@ -1,7 +1,5 @@
 ---
-template: BlogPostPage
 title: State Management and Performance Optimizations with React Context API and Hooks
-slug: /state-management-and-performance-optimizations-with-react-context-api-and-hooks
 date: 2020-10-12 11:51
 description: State management for React applications is a concept with a lot of
   alternative solutions. We have things like redux, mobx, mobx-state-tree,

@@ -1,7 +1,5 @@
 ---
-template: BlogPostPage
 title: Sorting Arrays in JavaScript
-slug: /sorting-arrays-in-javascript
 date: 2020-12-13 05:20
 description: Tips for sorting arrays of numbers, strings and objects in JavaScript
 featuredImage: /assets/tolga-ulkan-9k36QqhA0cU-unsplash.jpg

@@ -1,7 +1,5 @@
 ---
-template: BlogPostPage
 title: How to Create Glowing Images with React
-slug: /how-to-create-glowing-images-with-react
 date: 2022-04-18 22:00
 description: Creating glowing images with React
 featuredImage: /assets/jack-b-qnBMlkav-j8-unsplash.jpg

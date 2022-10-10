@@ -3,32 +3,25 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const templatesPath = './src/templates';
 
-function isNodeBlogPost(node) {
-  return node.frontmatter.template === 'BlogPostPage';
-}
-
 function getNodeSlug({ node, getNode }) {
   const slug = createFilePath({ node, getNode });
-  if (isNodeBlogPost(node)) {
-    // We add the '/blog' prefix here for blog posts.
-    return `/blog${slug}`;
-  }
-  return slug;
+
+  // We add the '/blog' prefix here for blog posts.
+  return `/blog${slug}`;
 }
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const blogList = path.resolve(`${templatesPath}/BlogPostsPage.js`);
-
   const result = await graphql(`
-    {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    query NodeMarkdownQuery {
+      allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/posts/" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ) {
         edges {
           node {
             frontmatter {
-              slug
-              template
               title
             }
             fields {
@@ -48,7 +41,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Create markdown pages
   const postEdges = result.data.allMarkdownRemark.edges;
-  let blogPostsCount = 0;
 
   postEdges.forEach((post, index) => {
     const previous =
@@ -57,16 +49,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const { route } = post.node.fields;
 
-    // TODO: Fix this
-    if (!post.node.frontmatter.template) {
-      return;
-    }
-
     createPage({
       path: route,
-      component: path.resolve(
-        `${templatesPath}/${String(post.node.frontmatter.template)}.js`,
-      ),
+      component: path.resolve(`${templatesPath}/BlogPostPage.js`),
       // additional data can be passed via context
       context: {
         route,
@@ -74,22 +59,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         next,
       },
     });
-
-    // Count blog posts.
-    const isBlogPost = isNodeBlogPost(post.node);
-    if (isBlogPost) {
-      blogPostsCount++;
-    }
   });
 
   // Create blog-list pages
   const postsPerPage = 9;
-  const pagesCount = Math.ceil(blogPostsCount / postsPerPage);
+  const pagesCount = Math.ceil(postEdges.length / postsPerPage);
 
   Array.from({ length: pagesCount }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-      component: blogList,
+      component: path.resolve(`${templatesPath}/BlogPostsPage.js`),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,

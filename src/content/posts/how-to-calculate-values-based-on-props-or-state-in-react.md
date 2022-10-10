@@ -1,7 +1,5 @@
 ---
-template: BlogPostPage
 title: How to Calculate Values Based on Props or State in React
-slug: /how-to-calculate-values-based-on-props-or-state-in-react
 date: 2022-05-01 17:00
 description: When to and not to use useState with useEffect to dynamically calculate values based on props or state
 featuredImage: /assets/jan-huber-NjV34SrbM_g-unsplash.jpg

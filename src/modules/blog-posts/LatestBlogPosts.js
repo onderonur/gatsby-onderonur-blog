@@ -13,7 +13,7 @@ function LatestBlogPosts() {
         query {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { template: { eq: "BlogPostPage" } } }
+            filter: { fileAbsolutePath: { regex: "/posts/" } }
             limit: 6
           ) {
             edges {
