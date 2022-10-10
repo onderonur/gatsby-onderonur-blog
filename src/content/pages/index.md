@@ -109,7 +109,7 @@ education:
 projects:
   - title: remix-shows
     description: TV Show guide built with Remix
-    featuredImage: /assets/project-remix-shows.jpg
+    featuredImage: /assets/project-remixshows.png
     demoUrl: https://remix-shows.netlify.app/
     sourceCodeUrl: https://github.com/onderonur/remix-shows
     techStack:
@@ -139,7 +139,7 @@ projects:
       - name: React
   - title: Next Shopper
     description: A simple e-commerce web application built with Next.js
-    featuredImage: /assets/project-nextshopper.jpg
+    featuredImage: /assets/project-nextshopper.png
     demoUrl: https://next-shopper.vercel.app/
     sourceCodeUrl: https://github.com/onderonur/next-shopper
     techStack:
@@ -150,7 +150,7 @@ projects:
   - title: RickQL
     description: Client app for Rick and Morty API w/ TypeScript, Next.js, React &
       Apollo GraphQL
-    featuredImage: /assets/project-rickql.jpg
+    featuredImage: /assets/project-rickql.png
     demoUrl: https://rick-and-morty-graphql.now.sh/
     sourceCodeUrl: https://github.com/onderonur/rick-and-morty-graphql
     techStack:
@@ -200,7 +200,7 @@ projects:
       - name: Nuxt.js
       - name: Vue.js
       - name: Tailwind CSS
-    featuredImage: /assets/project-nuxtheroesandvillains.jpg
+    featuredImage: /assets/project-nuxtheroesandvillains.png
   - title: svelte-github-explorer
     description: A simple Svelte app to explore users and their repositories on GitHub
     featuredImage: /assets/project-sveltegithubexplorer.png
@@ -211,7 +211,7 @@ projects:
       - name: Svelte
   - title: Onur Önder - Blog
     description: Personal website & blog. Built w/ Gatsby & Netlify CMS
-    featuredImage: /assets/project-onderonurblog.jpg
+    featuredImage: /assets/project-onderonurblog.png
     demoUrl: https://onderonur.netlify.app/
     sourceCodeUrl: https://github.com/onderonur/onderonur-blog
     techStack:
