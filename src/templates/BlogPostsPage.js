@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../modules/layout/Layout';
 import BlogPosts from '../modules/blog-posts/BlogPosts';
 
-export const blogListQuery = graphql`
+export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }

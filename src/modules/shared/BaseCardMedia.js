@@ -3,8 +3,7 @@ import Img from 'gatsby-image';
 import { Box, CardMedia, styled } from '@mui/material';
 
 const StyledCardMedia = styled(CardMedia)({
-  height: 0,
-  paddingBottom: '68%',
+  aspectRatio: '16 / 9',
 });
 
 const ImgOverlay = styled('div')({

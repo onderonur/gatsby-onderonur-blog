@@ -1,12 +1,11 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import { Box, Typography, styled } from '@mui/material';
-import { useLocation } from '@reach/router';
+import { Typography, styled } from '@mui/material';
 import HtmlRenderer from '../shared/HtmlRenderer';
-import ShareButtons from './ShareButtons';
 import SEO from '../seo/SEO';
 import { Bold } from '../shared/StyledUtils';
 import BlogPostPagination from './BlogPostPagination';
+import BlogPostShareButtons from './BlogPostShareButtons';
 
 const StyledArticle = styled('article')({
   margin: '0 auto',
@@ -52,24 +51,15 @@ const ArticleHeading = styled('div')(({ theme }) => ({
   textAlign: 'center',
 }));
 
-function BlogPostShareButtons({ siteUrl }) {
-  const location = useLocation();
-  return (
-    <Box display="flex" justifyContent="flex-end">
-      <ShareButtons url={`${siteUrl}${location.pathname}`} />
-    </Box>
-  );
-}
-
 function BlogPost({ data, pageContext }) {
-  const { markdownRemark, site } = data; // data.markdownRemark contains your post data
+  const { markdownRemark, site } = data;
   const { frontmatter, html, excerpt, fields } = markdownRemark;
   const featuredImage = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.fluid
     : '';
   const { previous, next } = pageContext;
 
-  let props = {
+  const props = {
     previous,
     next,
   };

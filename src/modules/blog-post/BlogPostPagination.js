@@ -1,33 +1,38 @@
 import React from 'react';
-import { Box, Divider, Grid } from '@mui/material';
+import { Divider, styled } from '@mui/material';
 import PaginationLink from '../blog-posts/PaginationLink';
+
+const PaginationWrapper = styled('div')(({ theme, hasPrevious }) => ({
+  margin: theme.spacing(2),
+  display: 'flex',
+  gap: theme.spacing(2),
+  justifyContent: hasPrevious ? 'space-between' : 'flex-end',
+  flexDirection: 'column',
+  [theme.breakpoints.up('sm')]: {
+    flexDirection: 'row',
+  },
+}));
 
 function BlogPostPagination({ previous, next }) {
   return (
     <div>
       <Divider />
-      <Box marginY={2}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            {previous && (
-              <PaginationLink
-                direction="previous"
-                to={previous.fields.route}
-                subtitle={previous.frontmatter.title}
-              />
-            )}
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            {next && (
-              <PaginationLink
-                direction="next"
-                to={next.fields.route}
-                subtitle={next.frontmatter.title}
-              />
-            )}
-          </Grid>
-        </Grid>
-      </Box>
+      <PaginationWrapper hasPrevious={!!previous}>
+        {previous && (
+          <PaginationLink
+            direction="previous"
+            to={previous.fields.route}
+            subtitle={previous.frontmatter.title}
+          />
+        )}
+        {next && (
+          <PaginationLink
+            direction="next"
+            to={next.fields.route}
+            subtitle={next.frontmatter.title}
+          />
+        )}
+      </PaginationWrapper>
     </div>
   );
 }

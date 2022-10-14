@@ -72,20 +72,20 @@ const Tagline = styled(Typography)({
 
 const SmoothImage = styled(Img)(({ theme }) => ({
   borderRadius: '50%',
-  height: '12rem',
-  width: '12rem',
+  height: '9rem',
+  width: '9rem',
   margin: 'auto',
-  [theme.breakpoints.down('lg')]: {
-    height: '11rem',
-    width: '11rem',
-  },
-  [theme.breakpoints.down('md')]: {
+  [theme.breakpoints.up('sm')]: {
     height: '10rem',
     width: '10rem',
   },
-  [theme.breakpoints.down('sm')]: {
-    height: '9rem',
-    width: '9rem',
+  [theme.breakpoints.up('md')]: {
+    height: '11rem',
+    width: '11rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    height: '12rem',
+    width: '12rem',
   },
 }));
 

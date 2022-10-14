@@ -3,16 +3,6 @@ import BlogPost from '../modules/blog-post/BlogPost';
 import Layout from '../modules/layout/Layout';
 import { graphql } from 'gatsby';
 
-function BlogPostPage(props) {
-  return (
-    <Layout>
-      <BlogPost {...props} />
-    </Layout>
-  );
-}
-
-export default BlogPostPage;
-
 export const pageQuery = graphql`
   query BlogPostQuery($route: String!) {
     site {
@@ -53,3 +43,13 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+function BlogPostPage(props) {
+  return (
+    <Layout>
+      <BlogPost {...props} />
+    </Layout>
+  );
+}
+
+export default BlogPostPage;
