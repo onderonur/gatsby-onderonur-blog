@@ -12,7 +12,7 @@ function LatestBlogPosts() {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: { fileAbsolutePath: { regex: "/posts/" } }
-        limit: 6
+        limit: 3
       ) {
         edges {
           node {

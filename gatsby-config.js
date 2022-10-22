@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/content/common/`,
+        path: `${__dirname}/content/common/`,
         name: 'common',
       },
     },
@@ -37,7 +37,7 @@ module.exports = {
         // We just want to get the file name to
         // create a proper slug in gatsby-node.
         // So, we omit this path.
-        path: `${__dirname}/src/content/posts/`,
+        path: `${__dirname}/content/posts/`,
         name: 'blogPosts',
       },
     },

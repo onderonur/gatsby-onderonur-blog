@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Img from 'gatsby-image';
 import { Typography, styled } from '@mui/material';
 import HtmlRenderer from '../shared/HtmlRenderer';
@@ -68,6 +68,16 @@ function BlogPost({ data, pageContext }) {
     <BlogPostShareButtons siteUrl={site.siteMetadata.siteUrl} />
   );
 
+  // To strip HTML tags from the image caption
+  const featuredImageAlt = useMemo(() => {
+    const regexForStripHTML = /<([^</> ]+)[^<>]*?>[^<>]*?<\/\1> */gi;
+    const stripContent = frontmatter.featuredImageCaption.replaceAll(
+      regexForStripHTML,
+      '',
+    );
+    return stripContent;
+  }, []);
+
   return (
     <>
       <SEO
@@ -91,10 +101,7 @@ function BlogPost({ data, pageContext }) {
           {shareButtons}
           {featuredImage && (
             <StyledFigure>
-              <FeaturedImage
-                fluid={featuredImage}
-                alt={`${frontmatter.title} - Featured image`}
-              />
+              <FeaturedImage fluid={featuredImage} alt={featuredImageAlt} />
               {frontmatter.featuredImageCaption && (
                 <StyledFigcaption>
                   <HtmlRenderer

@@ -20,7 +20,7 @@ collections:
     label_singular: Post # Used in the UI, ie: "New Post"
     description: >
       Create awesome content here.
-    folder: src/content/posts
+    folder: content/posts
     slug: '{{slug}}'
     summary: '{{title}} — {{year}}/{{month}}/{{day}}'
     create: true # Allow users to create new documents in this collection
@@ -56,7 +56,7 @@ collections:
     files:
       - label: Skills
         name: skills
-        file: src/content/common/skills.md
+        file: content/common/skills.md
         fields:
           - label: Skills
             name: skills
@@ -72,7 +72,7 @@ collections:
                 widget: string
       - label: 'Experience'
         name: 'experience'
-        file: src/content/common/experience.md
+        file: content/common/experience.md
         fields:
           - label: 'Experience'
             name: 'experience'
@@ -98,7 +98,7 @@ collections:
                 required: false
       - label: 'Education'
         name: 'education'
-        file: src/content/common/education.md
+        file: content/common/education.md
         fields:
           - label: Education
             name: education
@@ -128,7 +128,7 @@ collections:
                 required: false
       - label: Projects
         name: projects
-        file: src/content/common/projects.md
+        file: content/common/projects.md
         fields:
           - label: Projects
             name: projects
@@ -162,7 +162,7 @@ collections:
                     widget: string
       - label: Author
         name: author
-        file: src/content/common/author.md
+        file: content/common/author.md
         fields:
           - label: Title
             name: title

@@ -23,7 +23,14 @@ const Layout = ({ hero, children }) => {
   const { title } = site.siteMetadata;
 
   return (
-    <Box display="flex" flexDirection="column" minHeight="100vh">
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'absolute',
+        inset: 0,
+      }}
+    >
       <Header siteTitle={title} />
       {hero}
       {!hero && <HeaderOffset />}
