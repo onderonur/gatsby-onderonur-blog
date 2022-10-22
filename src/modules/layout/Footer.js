@@ -14,10 +14,15 @@ const getYearRange = () => {
 
 const StyledFooter = styled('footer')(({ theme }) => ({
   display: 'flex',
+  flexDirection: 'column-reverse',
   alignItems: 'center',
+  gap: theme.spacing(1),
   background: theme.palette.grey[200],
   padding: theme.spacing(1, 3),
   zIndex: 1,
+  [theme.breakpoints.up('sm')]: {
+    flexDirection: 'row',
+  },
 }));
 
 const Footer = () => (

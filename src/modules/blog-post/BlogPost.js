@@ -71,7 +71,7 @@ function BlogPost({ data, pageContext }) {
   // To strip HTML tags from the image caption
   const featuredImageAlt = useMemo(() => {
     const regexForStripHTML = /<([^</> ]+)[^<>]*?>[^<>]*?<\/\1> */gi;
-    const stripContent = frontmatter.featuredImageCaption.replaceAll(
+    const stripContent = frontmatter.featuredImageCaption?.replace(
       regexForStripHTML,
       '',
     );
