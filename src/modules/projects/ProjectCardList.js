@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import GridList from '../shared/GridList';
+import GridList from '../common/GridList';
 import ProjectCard from './ProjectCard';
 
-const ProjectCardList = () => {
+function ProjectCardList() {
   const {
     markdownRemark: {
       frontmatter: { projects },
@@ -35,12 +35,14 @@ const ProjectCardList = () => {
   `);
 
   return (
-    <GridList
-      data={projects}
-      getItemKey={(project) => project.title}
-      renderItem={(project) => <ProjectCard data={project} />}
-    />
+    <GridList>
+      {projects.map((project) => (
+        <li key={project.title}>
+          <ProjectCard data={project} />
+        </li>
+      ))}
+    </GridList>
   );
-};
+}
 
 export default ProjectCardList;

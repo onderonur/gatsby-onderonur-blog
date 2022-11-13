@@ -2,14 +2,9 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header, { HeaderOffset } from './Header';
 import Footer from './Footer';
-import { Box, Container, styled } from '@mui/material';
+import { Box, Container } from '@mui/material';
 
-const ContentContainer = styled(Container)({
-  flexGrow: 1,
-  position: 'relative',
-});
-
-const Layout = ({ hero, children }) => {
+function Layout({ hero, children }) {
   const { site } = useStaticQuery(graphql`
     query LayoutQuery {
       site {
@@ -20,26 +15,23 @@ const Layout = ({ hero, children }) => {
     }
   `);
 
-  const { title } = site.siteMetadata;
-
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        position: 'absolute',
-        inset: 0,
+        minHeight: '100vh',
       }}
     >
-      <Header siteTitle={title} />
+      <Header siteTitle={site.siteMetadata.title} />
       {hero}
       {!hero && <HeaderOffset />}
-      <ContentContainer maxWidth="lg" component="main">
+      <Container maxWidth="lg" component="main" sx={{ flexGrow: 1 }}>
         {children}
-      </ContentContainer>
+      </Container>
       <Footer />
     </Box>
   );
-};
+}
 
 export default Layout;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Typography, styled } from '@mui/material';
 import Layout from '../modules/layout/Layout';
-import BaseButton from '../modules/shared/BaseButton';
+import BaseButton from '../modules/common/BaseButton';
 import SEO from '../modules/seo/SEO';
-import GatsbyLink from '../modules/shared/GatsbyLink';
-import { Bold } from '../modules/shared/StyledUtils';
+import GatsbyLink from '../modules/common/GatsbyLink';
+import { Bold } from '../modules/common/StyledUtils';
 import HomeIcon from '@mui/icons-material/HomeOutlined';
 
 const PageContent = styled('div')({

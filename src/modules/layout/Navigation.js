@@ -1,6 +1,6 @@
 import React from 'react';
-import BaseButton from '../shared/BaseButton';
-import GatsbyLink from '../shared/GatsbyLink';
+import BaseButton from '../common/BaseButton';
+import GatsbyLink from '../common/GatsbyLink';
 import { Stack } from '@mui/material';
 
 const menuItems = [

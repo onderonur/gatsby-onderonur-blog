@@ -13,7 +13,7 @@ const StyledCardMedia = styled(CardMedia)({
   },
 });
 
-const BaseCardMedia = ({ src, alt }) => {
+function BaseCardMedia({ src, alt }) {
   if (!src) {
     return null;
   }
@@ -27,6 +27,6 @@ const BaseCardMedia = ({ src, alt }) => {
       alt={alt}
     />
   );
-};
+}
 
 export default BaseCardMedia;

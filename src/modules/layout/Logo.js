@@ -1,12 +1,14 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import { Bold } from '../shared/StyledUtils';
-import GatsbyLink from '../shared/GatsbyLink';
+import { Bold } from '../common/StyledUtils';
+import GatsbyLink from '../common/GatsbyLink';
 
-const Logo = ({ title }) => (
-  <Typography component={GatsbyLink} to="/" color="primary">
-    <Bold>{title}</Bold>
-  </Typography>
-);
+function Logo({ title }) {
+  return (
+    <Typography component={GatsbyLink} to="/" color="primary">
+      <Bold>{title}</Bold>
+    </Typography>
+  );
+}
 
 export default Logo;

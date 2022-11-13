@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link as MuiLink, styled } from '@mui/material';
 import SEO from '../seo/SEO';
-import { Bold } from '../shared/StyledUtils';
-import GridList from '../shared/GridList';
-import Section from '../shared/Section';
+import { Bold } from '../common/StyledUtils';
+import GridList from '../common/GridList';
+import Section from '../common/Section';
 import BlogPostCard from '../blog-posts/BlogPostCard';
 import PaginationLink from './PaginationLink';
-import GatsbyLink from '../shared/GatsbyLink';
+import GatsbyLink from '../common/GatsbyLink';
 
 const blogPrefix = '/blog/';
 
@@ -86,11 +86,13 @@ function BlogPosts({ data, pageContext }) {
         description={`Onur Önder's blog page ${currentPage} of ${pagesCount}`}
       />
       <Section title="Blog" titleComponent="h1">
-        <GridList
-          data={postEdges}
-          getItemKey={(edge) => edge.node.id}
-          renderItem={(edge) => <BlogPostCard data={edge.node} />}
-        />
+        <GridList>
+          {postEdges.map((edge) => (
+            <li key={edge.node.id}>
+              <BlogPostCard data={edge.node} />
+            </li>
+          ))}
+        </GridList>
         <Pagination
           {...{
             isFirst,

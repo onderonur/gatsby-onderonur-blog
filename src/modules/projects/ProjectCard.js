@@ -7,16 +7,16 @@ import {
   Chip,
   styled,
 } from '@mui/material';
-import BaseCardMedia from '../shared/BaseCardMedia';
-import BaseCardTitle from '../shared/BaseCardTitle';
-import BaseCardSubtitle from '../shared/BaseCardSubtitle';
-import ExternalLinkButton from '../shared/ExternalLinkButton';
+import BaseCardMedia from '../common/BaseCardMedia';
+import BaseCardTitle from '../common/BaseCardTitle';
+import BaseCardSubtitle from '../common/BaseCardSubtitle';
+import ExternalLinkButton from '../common/ExternalLinkButton';
 
 const StyledChip = styled(Chip)(({ theme }) => ({
   margin: theme.spacing(0.5),
 }));
 
-const ProjectCard = ({ data }) => {
+function ProjectCard({ data }) {
   return (
     <Card>
       <BaseCardMedia
@@ -53,6 +53,6 @@ const ProjectCard = ({ data }) => {
       </CardActions>
     </Card>
   );
-};
+}
 
 export default ProjectCard;

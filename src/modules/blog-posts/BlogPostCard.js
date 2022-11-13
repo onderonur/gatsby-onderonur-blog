@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
-import BaseCardMedia from '../shared/BaseCardMedia';
-import BaseCardTitle from '../shared/BaseCardTitle';
-import GatsbyLink from '../shared/GatsbyLink';
+import BaseCardMedia from '../common/BaseCardMedia';
+import BaseCardTitle from '../common/BaseCardTitle';
+import GatsbyLink from '../common/GatsbyLink';
 
 function BlogPostCard({ data }) {
   return (

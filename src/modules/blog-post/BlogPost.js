@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import Img from 'gatsby-image';
 import { Typography, styled } from '@mui/material';
-import HtmlRenderer from '../shared/HtmlRenderer';
+import HtmlRenderer from '../common/HtmlRenderer';
 import SEO from '../seo/SEO';
-import { Bold } from '../shared/StyledUtils';
+import { Bold } from '../common/StyledUtils';
 import BlogPostPagination from './BlogPostPagination';
 import BlogPostShareButtons from './BlogPostShareButtons';
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Box } from '@mui/material';
-import BaseButton from '../shared/BaseButton';
+import BaseButton from '../common/BaseButton';
 import BlogPostCardList from './BlogPostCardList';
-import GatsbyLink from '../shared/GatsbyLink';
+import GatsbyLink from '../common/GatsbyLink';
 
 function LatestBlogPosts() {
   const data = useStaticQuery(graphql`

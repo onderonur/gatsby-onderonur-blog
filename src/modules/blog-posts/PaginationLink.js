@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as MuiLink, styled } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import GatsbyLink from '../shared/GatsbyLink';
+import GatsbyLink from '../common/GatsbyLink';
 
 const Root = styled(MuiLink, {
   shouldForwardProp: (prop) => prop !== 'isNextLink',
@@ -26,6 +26,7 @@ const PaginationLinkSubtitle = styled('div')(({ theme }) => ({
 
 function PaginationLink({ to, subtitle, direction }) {
   const isNextLink = direction === 'next';
+
   return (
     <Root
       component={GatsbyLink}

@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseButton from './BaseButton';
 
-const ExternalLinkButton = ({ href, children }) => {
+function ExternalLinkButton({ href, children }) {
   return (
     <BaseButton
       size="small"
@@ -13,6 +13,6 @@ const ExternalLinkButton = ({ href, children }) => {
       {children}
     </BaseButton>
   );
-};
+}
 
 export default ExternalLinkButton;

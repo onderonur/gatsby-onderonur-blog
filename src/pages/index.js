@@ -6,12 +6,12 @@ import { Typography, Stack, styled } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { HeaderOffset } from '../modules/layout/Header';
 import BackgroundImage from 'gatsby-background-image';
-import BaseButton from '../modules/shared/BaseButton';
+import BaseButton from '../modules/common/BaseButton';
 import SEO from '../modules/seo/SEO';
-import HtmlRenderer from '../modules/shared/HtmlRenderer';
-import { Bold } from '../modules/shared/StyledUtils';
+import HtmlRenderer from '../modules/common/HtmlRenderer';
+import { Bold } from '../modules/common/StyledUtils';
 import ProjectCardList from '../modules/projects/ProjectCardList';
-import Section from '../modules/shared/Section';
+import Section from '../modules/common/Section';
 import LatestBlogPosts from '../modules/blog-posts/LatestBlogPosts';
 import SkillsList from '../modules/skills/SkillsList';
 import EducationTimeline from '../modules/education/EducationTimeline';
@@ -95,7 +95,7 @@ const HeroBannerContent = styled('div')(({ theme }) => ({
   position: 'relative',
   '&:before': {
     content: '""',
-    background: '#ededed',
+    backgroundColor: '#ededed',
     position: 'absolute',
     inset: 0,
     opacity: 0.9,

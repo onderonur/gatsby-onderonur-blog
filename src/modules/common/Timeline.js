@@ -46,7 +46,7 @@ export function TimelineItem({
       }}
       contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
       iconStyle={{
-        background: `${theme.palette.primary.main}`,
+        backgroundColor: `${theme.palette.primary.main}`,
         color: '#fff',
       }}
     >

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import { Timeline, TimelineItem } from '../shared/Timeline';
+import { Timeline, TimelineItem } from '../common/Timeline';
 import { graphql, useStaticQuery } from 'gatsby';
 
 function EducationTimeline() {

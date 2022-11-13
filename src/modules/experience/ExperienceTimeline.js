@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import { Timeline, TimelineItem } from '../shared/Timeline';
+import { Timeline, TimelineItem } from '../common/Timeline';
 import { graphql, useStaticQuery } from 'gatsby';
 
 function ExperienceTimeline() {

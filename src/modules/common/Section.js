@@ -1,39 +1,28 @@
 import React from 'react';
-import { Box, Typography, Fade, styled } from '@mui/material';
+import { Box, Typography, Fade } from '@mui/material';
 import { useTrackVisibility } from 'react-intersection-observer-hook';
 import slugify from 'slugify';
 import { Bold } from './StyledUtils';
 
 const scrollMarginTop = '5rem';
 
-const StyledTypography = styled(Typography)({
-  scrollMarginTop,
-});
-
 const SectionTitle = React.forwardRef(function SectionTitle(
   { children, component = 'h2', ...rest },
   ref,
 ) {
   return (
-    <StyledTypography
+    <Typography
       ref={ref}
       {...rest}
+      sx={{ ...rest.sx, scrollMarginTop }}
       component={component}
       variant="h4"
       gutterBottom
     >
       <Bold>{children}</Bold>
-    </StyledTypography>
+    </Typography>
   );
 });
-
-const StyledAnchor = styled('a')({
-  color: 'inherit',
-});
-
-const StyledFade = styled(Fade)`
-  scroll-margin-top: ${scrollMarginTop};
-`;
 
 const Section = React.forwardRef(function Section(
   { title, titleComponent, children },
@@ -44,7 +33,7 @@ const Section = React.forwardRef(function Section(
   const sectionSlug = slugify(title, { lower: true });
 
   return (
-    <StyledFade
+    <Fade
       ref={(node) => {
         observerRef(node);
         if (ref) {
@@ -53,14 +42,17 @@ const Section = React.forwardRef(function Section(
       }}
       in={wasEverVisible}
       timeout={1000}
+      sx={{ scrollMarginTop }}
     >
-      <Box component="section" marginTop={3} marginBottom={4}>
+      <Box component="section" sx={{ marginTop: 3, marginBottom: 4 }}>
         <SectionTitle id={sectionSlug} component={titleComponent}>
-          <StyledAnchor href={`#${sectionSlug}`}>{title}</StyledAnchor>
+          <Box component="a" href={`#${sectionSlug}`} sx={{ color: 'inherit' }}>
+            {title}
+          </Box>
         </SectionTitle>
         {children}
       </Box>
-    </StyledFade>
+    </Fade>
   );
 });
 

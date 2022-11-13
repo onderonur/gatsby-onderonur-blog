@@ -6,19 +6,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-const query = graphql`
-  query SocialAccountsQuery {
-    site {
-      siteMetadata {
-        twitterUsername
-        linkedinUsername
-        githubUsername
-        mail
-      }
-    }
-  }
-`;
-
 function SocialAccountLink({ ['aria-label']: ariaLabel, url, icon }) {
   if (!url) {
     return null;
@@ -40,7 +27,18 @@ function SocialAccountLink({ ['aria-label']: ariaLabel, url, icon }) {
 }
 
 function SocialAccounts() {
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(graphql`
+    query SocialAccountsQuery {
+      site {
+        siteMetadata {
+          twitterUsername
+          linkedinUsername
+          githubUsername
+          mail
+        }
+      }
+    }
+  `);
   const { siteMetadata } = site;
   const { twitterUsername, githubUsername, linkedinUsername, mail } =
     siteMetadata;

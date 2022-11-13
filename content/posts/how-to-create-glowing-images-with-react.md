@@ -66,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding: 0.8rem;
-    background: #19222D
+    background-color: #19222D
   }
 `;
 
