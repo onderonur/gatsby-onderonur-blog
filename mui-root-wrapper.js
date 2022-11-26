@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 
 let theme = createTheme({
+  typography: { fontFamily: "'Inter', sans-serif" },
   palette: {
     primary: {
       main: '#00a0c0',

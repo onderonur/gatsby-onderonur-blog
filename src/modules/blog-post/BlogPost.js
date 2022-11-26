@@ -1,16 +1,11 @@
 import React, { useMemo } from 'react';
 import Img from 'gatsby-image';
-import { Typography, styled } from '@mui/material';
+import { Typography, styled, Box } from '@mui/material';
 import HtmlRenderer from '../common/HtmlRenderer';
 import SEO from '../seo/SEO';
 import { Bold } from '../common/StyledUtils';
 import BlogPostPagination from './BlogPostPagination';
 import BlogPostShareButtons from './BlogPostShareButtons';
-
-const StyledArticle = styled('article')({
-  margin: '0 auto',
-  maxWidth: '85ch',
-});
 
 const StyledFigure = styled('figure')({
   margin: 0,
@@ -32,7 +27,6 @@ const FeaturedImage = styled(Img)(({ theme }) => ({
 }));
 
 const BlogPostContent = styled(HtmlRenderer)(({ theme }) => ({
-  padding: theme.spacing(2),
   img: {
     width: '100%',
   },
@@ -43,6 +37,9 @@ const BlogPostContent = styled(HtmlRenderer)(({ theme }) => ({
   '*:not(pre) code': {
     padding: theme.spacing(0.2, 0.4),
     backgroundColor: theme.palette.grey[300],
+  },
+  [theme.breakpoints.up('md')]: {
+    padding: theme.spacing(0, 2),
   },
 }));
 
@@ -86,9 +83,9 @@ function BlogPost({ data, pageContext }) {
           frontmatter.description ? frontmatter.description : excerpt
         }
         imageSrc={featuredImage.src}
-        article={true}
+        article
       />
-      <StyledArticle>
+      <Box component="article" sx={{ marginX: 'auto', maxWidth: 680 }}>
         <header>
           <ArticleHeading>
             <Typography component="h1" variant="h4">
@@ -117,7 +114,7 @@ function BlogPost({ data, pageContext }) {
         <BlogPostContent html={html} />
 
         {shareButtons}
-      </StyledArticle>
+      </Box>
       {(previous || next) && <BlogPostPagination {...props} />}
     </>
   );
