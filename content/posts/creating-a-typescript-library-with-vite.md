@@ -265,18 +265,13 @@ We can also use `alpha` or `beta` versions. [npm version Docs](https://docs.npmj
 We may want to test our package to be sure if it's reliable and we're not breaking anything in time. To do that, we need to install some packages to be used for testing.
 
 ```
-npm i -D @types/jest ts-jest
+npm i -D jest @types/jest ts-jest
 ```
 
-And we need to add a `jest.config.js` file to configure Jest to test our `ts` files.
+And we need to create a `jest.config.js` file to configure Jest to test our `ts` files.
 
-```js
-// jest.config.js
-/** @type {import('ts-jest').JestConfigWithTsJest} */
-export default {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-};
+```
+npx ts-jest config:init
 ```
 
 Lastly, we need to add a `test` script to our `package.json`.

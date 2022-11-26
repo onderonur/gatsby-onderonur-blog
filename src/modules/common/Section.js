@@ -44,7 +44,15 @@ const Section = React.forwardRef(function Section(
       timeout={1000}
       sx={{ scrollMarginTop }}
     >
-      <Box component="section" sx={{ marginTop: 3, marginBottom: 4 }}>
+      <Box
+        component="section"
+        // Since this component is wrapped with `Fade`,
+        // `sx` prop is not working on this somehow.
+        // So the system props are used here.
+        // https://mui.com/system/react-box/#system-props
+        marginTop={3}
+        marginBottom={4}
+      >
         <SectionTitle id={sectionSlug} component={titleComponent}>
           <Box component="a" href={`#${sectionSlug}`} sx={{ color: 'inherit' }}>
             {title}
