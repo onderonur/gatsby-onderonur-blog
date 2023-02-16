@@ -50,7 +50,7 @@ const ArticleHeading = styled('div')(({ theme }) => ({
 
 function BlogPost({ data, pageContext }) {
   const { markdownRemark, site } = data;
-  const { frontmatter, html, excerpt, fields } = markdownRemark;
+  const { frontmatter, html, excerpt } = markdownRemark;
   const featuredImage = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.fluid
     : '';
@@ -92,7 +92,7 @@ function BlogPost({ data, pageContext }) {
               <Bold>{frontmatter.title}</Bold>
             </Typography>
             <Typography component="p" color="textSecondary" variant="subtitle2">
-              <time>{frontmatter.date}</time> · {fields.readingTime.text}
+              <time>{frontmatter.date}</time>
             </Typography>
           </ArticleHeading>
           {shareButtons}

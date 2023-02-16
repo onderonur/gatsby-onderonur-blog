@@ -15,8 +15,7 @@ function BlogPostCard({ data }) {
         <CardContent>
           <BaseCardTitle>{data.frontmatter.title}</BaseCardTitle>
           <Typography component="p" variant="subtitle2" color="textSecondary">
-            <time>{data.frontmatter.date}</time> ·{' '}
-            {data.fields.readingTime.text}
+            <time>{data.frontmatter.date}</time>
           </Typography>
         </CardContent>
       </CardActionArea>

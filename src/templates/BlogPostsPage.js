@@ -29,9 +29,6 @@ export const pageQuery = graphql`
           }
           fields {
             route
-            readingTime {
-              text
-            }
           }
         }
       }

@@ -32,9 +32,6 @@ function LatestBlogPosts() {
             }
             fields {
               route
-              readingTime {
-                text
-              }
             }
           }
         }

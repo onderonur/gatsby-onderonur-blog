@@ -49,7 +49,6 @@ module.exports = {
         gfm: true,
         plugins: [
           netlifyCmsPaths,
-          `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-remark-images`,
             options: {
