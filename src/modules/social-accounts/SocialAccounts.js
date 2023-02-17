@@ -57,7 +57,7 @@ function SocialAccounts() {
       />
       <SocialAccountLink
         icon={LinkedInIcon}
-        url={`https://linkedin.com/in/${linkedinUsername}`}
+        url={`https://www.linkedin.com/in/${linkedinUsername}`}
         aria-label="LinkedIn Profile"
       />
       <SocialAccountLink

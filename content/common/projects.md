@@ -44,7 +44,7 @@ projects:
     description: Client app for Rick and Morty API with TypeScript, Next.js, React &
       Apollo GraphQL
     featuredImage: /assets/project-rickql.png
-    demoUrl: https://rick-and-morty-graphql.now.sh/
+    demoUrl: https://rick-and-morty-graphql.vercel.app/
     sourceCodeUrl: https://github.com/onderonur/rick-and-morty-graphql
     techStack:
       - name: TypeScript
@@ -98,7 +98,7 @@ projects:
   - title: svelte-github-explorer
     description: A simple Svelte app to explore users and their repositories on GitHub
     featuredImage: /assets/proejct-sveltegithubexplorer.png
-    demoUrl: https://onderonur.github.io/svelte-github-explorer
+    demoUrl: https://onderonur.github.io/svelte-github-explorer/
     sourceCodeUrl: https://github.com/onderonur/svelte-github-explorer
     techStack:
       - name: SvelteKit
