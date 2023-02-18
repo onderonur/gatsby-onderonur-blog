@@ -1,7 +1,7 @@
 ---
 title: Creating a TypeScript Package with Vite
 date: 2022-10-22 22:00
-description: How to create and publish a Typescript library by using Vite
+description: How to create and publish a Typescript library by using Vite Library Mode
 featuredImage: /assets/leone-venter-mTkXSSScrzw-unsplash.jpg
 featuredImageCaption: Photo by <a href="https://unsplash.com/@fempreneurstyledstock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Leone Venter</a> on <a href="https://unsplash.com/s/photos/package?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
@@ -15,12 +15,24 @@ We are gonna create a simple utility package with a couple of functions. And it 
 **Note:** Here are the package versions used in this tutorial. When a new version is published, some of these may have breaking changes, change of best practices, have new options/usages etc. It is **always** nice to check the original documentation of the tools we are using every now and then.
 
 ```
-"@types/jest": "^29.2.0",
-"@types/node": "^18.11.3",
-"ts-jest": "^29.0.3",
-"typescript": "^4.6.4",
-"vite": "^3.1.0",
-"vite-plugin-dts": "^1.6.6"
+"@types/node": "^18.14.0",
+"typescript": "^4.9.3",
+"vite": "^4.1.0",
+"vite-plugin-dts": "^1.7.3"
+```
+
+For testing with Jest:
+
+```
+"@types/jest": "^29.4.0",
+"jest": "^29.4.3",
+"ts-jest": "^29.0.5",
+```
+
+For testing with Vitest:
+
+```
+"vitest": "^0.28.5"
 ```
 
 ## Scaffolding the Project
@@ -264,6 +276,12 @@ We can also use `alpha` or `beta` versions. [npm version Docs](https://docs.npmj
 
 We may want to test our package to be sure if it's reliable and we're not breaking anything in time. To do that, we need to install some packages to be used for testing.
 
+We can use the good old [Jest](https://jestjs.io/) or [Vitest](https://vitest.dev/) for testing. It's up to you to choose the one you like.
+
+### Testing with Jest
+
+First, we need to install the packages required for testing.
+
 ```
 npm i -D jest @types/jest ts-jest
 ```
@@ -296,7 +314,7 @@ Now, we can create our test files and see if our package works properly.
 // src/sum.test.ts
 import sum from './sum';
 
-it('sums two numbers', () => {
+test('sums two numbers', () => {
   expect(sum(4, 7)).toBe(11);
 });
 ```
@@ -305,7 +323,7 @@ it('sums two numbers', () => {
 // src/subtract.test.ts
 import subtract from './subtract';
 
-it('subtracts two numbers', () => {
+test('subtracts two numbers', () => {
   expect(subtract(10, 7)).toBe(3);
 });
 ```
@@ -321,6 +339,94 @@ npm test
 ```
 Test Suites: 2 passed, 2 total
 Tests:       2 passed, 2 total
+```
+
+### Testing with Vitest
+
+As the first step, we will install Vitest.
+
+```
+npm i -D vitest
+```
+
+Also, even if it's not required for this example, we can configure it in our `vite.config.ts`.
+
+```ts{3-4,20-22}
+// vite.config.ts
+
+/// <reference types="vitest" />
+// Configure Vitest (https://vitest.dev/config/)
+
+import { resolve } from "path";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
+
+// https://vitejs.dev/guide/build.html#library-mode
+export default defineConfig({
+  build: {
+    lib: {
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "my-lib",
+      fileName: "my-lib",
+    },
+  },
+  plugins: [dts()],
+  test: {
+    // ...
+  },
+});
+
+```
+
+We will add `test` script to `package.json`:
+
+```json{8}
+// package.json
+{
+  // ...
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  // ...
+}
+```
+
+Create our test files to be sure our package works properly:
+
+```ts
+// src/sum.test.ts
+import { test, expect } from 'vitest';
+import sum from './sum';
+
+test('sums two numbers', () => {
+  expect(sum(4, 7)).toBe(11);
+});
+```
+
+```ts
+// src/subtract.test.ts
+import { test, expect } from 'vitest';
+import subtract from './subtract';
+
+test('subtracts two numbers', () => {
+  expect(subtract(10, 7)).toBe(3);
+});
+```
+
+And we can run the tests to see if everything is fine.
+
+```
+npm test
+```
+
+🎉🎉🎉
+
+```
+Test Files  2 passed (2)
+     Tests  2 passed (2)
 ```
 
 ## Linting & Formatting
@@ -345,11 +451,10 @@ Also, [Husky](https://typicode.github.io/husky/#/) and [lint-staged](https://git
 
 We are nearly there. We just need to add a couple of more fields to inform npm about our package.
 
-```json{5-16}
+```json{4-15}
 // package.json
 {
-  "name": "my-ts-lib",
-  "version": "0.0.0",
+  // ...
   "description": "This is a simple utility package",
   "author": "<YOUR_NAME>",
   "license": "MIT",
@@ -362,33 +467,7 @@ We are nearly there. We just need to add a couple of more fields to inform npm a
     "url": "https://github.com/<YOUR_USER_NAME>/my-ts-lib/issues"
   },
   "keywords": ["some", "keywords", "to", "describe", "the", "package"],
-  "type": "module",
-  "main": "./dist/my-lib.umd.cjs",
-  "module": "./dist/my-lib.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/my-lib.js",
-      "require": "./dist/my-lib.umd.cjs"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.2.0",
-    "@types/node": "^18.11.3",
-    "ts-jest": "^29.0.3",
-    "typescript": "^4.6.4",
-    "vite": "^3.1.0",
-    "vite-plugin-dts": "^1.6.6"
-  }
+  // ...
 }
 
 ```
