@@ -88,7 +88,7 @@ function BlogPost({ data, pageContext }) {
       <Box component="article" sx={{ marginX: 'auto', maxWidth: 680 }}>
         <header>
           <ArticleHeading>
-            <Typography component="h1" variant="h4">
+            <Typography component="h1" variant="h4" sx={{ marginBottom: 0.5 }}>
               <Bold>{frontmatter.title}</Bold>
             </Typography>
             <Typography component="p" color="textSecondary" variant="subtitle2">
