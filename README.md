@@ -3,10 +3,9 @@
 # onderonur-blog
 
 Personal website and blog, built with [Gatsby][gatsby] and [Netlify CMS][netlifycms].  
-Live site is **[here](https://onderonur.netlify.app/)**.  
-Created by moderately modifying [gatsby-started-foundation](https://www.gatsbyjs.com/starters/stackrole/gatsby-starter-foundation/).
+Live site is **[here](https://onderonur.netlify.app/)**.
 
-[![onderonur-blog](static/assets/project-onderonurblog.jpg)](https://onderonur.netlify.app/)
+[![onderonur-blog](./static/assets/project-onderonurblog.png)](https://onderonur.netlify.app/)
 
 ## 💻 Stack
 
@@ -39,7 +38,7 @@ Navigate into your new site’s directory and start it up.
 npm start
 ```
 
-Your site is now running at `http://localhost:8000`!
+Your site is now running on `http://localhost:8000`!
 
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
