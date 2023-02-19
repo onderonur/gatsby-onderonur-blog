@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import Img from 'gatsby-image';
 import { Typography, styled, Box } from '@mui/material';
 import HtmlRenderer from '../common/HtmlRenderer';
-import SEO from '../seo/SEO';
 import { Bold } from '../common/StyledUtils';
 import BlogPostPagination from './BlogPostPagination';
 import BlogPostShareButtons from './BlogPostShareButtons';
@@ -50,7 +49,7 @@ const ArticleHeading = styled('div')(({ theme }) => ({
 
 function BlogPost({ data, pageContext }) {
   const { markdownRemark, site } = data;
-  const { frontmatter, html, excerpt } = markdownRemark;
+  const { frontmatter, html } = markdownRemark;
   const featuredImage = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.fluid
     : '';
@@ -77,14 +76,6 @@ function BlogPost({ data, pageContext }) {
 
   return (
     <>
-      <SEO
-        title={frontmatter.title}
-        description={
-          frontmatter.description ? frontmatter.description : excerpt
-        }
-        imageSrc={featuredImage.src}
-        article
-      />
       <Box component="article" sx={{ marginX: 'auto', maxWidth: 680 }}>
         <header>
           <ArticleHeading>

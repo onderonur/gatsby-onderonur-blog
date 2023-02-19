@@ -113,67 +113,68 @@ function HomePage({ data }) {
   const aboutRef = useRef(null);
 
   return (
-    <>
-      <SEO title="Home" />
-      <Layout
-        hero={
-          <HeroBgImage Tag="section" fluid={heroImage.childImageSharp.fluid}>
-            <HeroBanner>
-              <HeaderOffset />
-              <HeroBannerContent>
-                <SmoothImage
-                  fluid={image}
-                  alt={`${frontmatter.title} - Featured image`}
-                />
-                <Stack marginY={2} spacing={1} alignItems="center">
-                  <div>
-                    <Typography variant="h3" component="h1">
-                      <Bold>{frontmatter.title}</Bold>
-                    </Typography>
-                    <Tagline variant="h4" component="p">
-                      {frontmatter.tagline}
-                    </Tagline>
-                  </div>
-                  <SocialAccounts />
-                  <BaseButton
-                    endIcon={<ExpandMoreIcon />}
-                    variant="outlined"
-                    color="primary"
-                    onClick={() => {
-                      aboutRef.current?.scrollIntoView({
-                        behavior: 'smooth',
-                      });
-                    }}
-                  >
-                    Find Out More
-                  </BaseButton>
-                </Stack>
-              </HeroBannerContent>
-            </HeroBanner>
-          </HeroBgImage>
-        }
-      >
-        <Section ref={aboutRef} title="About">
-          <HtmlRenderer html={html} />
-        </Section>
-        <Section title="Skills">
-          <SkillsList />
-        </Section>
-        <Section title="Experience">
-          <ExperienceTimeline />
-        </Section>
-        <Section title="Education">
-          <EducationTimeline />
-        </Section>
-        <Section title="Projects">
-          <ProjectCardList />
-        </Section>
-        <Section title="Latest in Blog">
-          <LatestBlogPosts />
-        </Section>
-      </Layout>
-    </>
+    <Layout
+      hero={
+        <HeroBgImage Tag="section" fluid={heroImage.childImageSharp.fluid}>
+          <HeroBanner>
+            <HeaderOffset />
+            <HeroBannerContent>
+              <SmoothImage
+                fluid={image}
+                alt={`${frontmatter.title} - Featured image`}
+              />
+              <Stack marginY={2} spacing={1} alignItems="center">
+                <div>
+                  <Typography variant="h3" component="h1">
+                    <Bold>{frontmatter.title}</Bold>
+                  </Typography>
+                  <Tagline variant="h4" component="p">
+                    {frontmatter.tagline}
+                  </Tagline>
+                </div>
+                <SocialAccounts />
+                <BaseButton
+                  endIcon={<ExpandMoreIcon />}
+                  variant="outlined"
+                  color="primary"
+                  onClick={() => {
+                    aboutRef.current?.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }}
+                >
+                  Find Out More
+                </BaseButton>
+              </Stack>
+            </HeroBannerContent>
+          </HeroBanner>
+        </HeroBgImage>
+      }
+    >
+      <Section ref={aboutRef} title="About">
+        <HtmlRenderer html={html} />
+      </Section>
+      <Section title="Skills">
+        <SkillsList />
+      </Section>
+      <Section title="Experience">
+        <ExperienceTimeline />
+      </Section>
+      <Section title="Education">
+        <EducationTimeline />
+      </Section>
+      <Section title="Projects">
+        <ProjectCardList />
+      </Section>
+      <Section title="Latest in Blog">
+        <LatestBlogPosts />
+      </Section>
+    </Layout>
   );
 }
 
 export default HomePage;
+
+export function Head({ location }) {
+  return <SEO title="Home" pathname={location.pathname} />;
+}

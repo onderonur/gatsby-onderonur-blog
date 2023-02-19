@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link as MuiLink, styled } from '@mui/material';
-import SEO from '../seo/SEO';
 import { Bold } from '../common/StyledUtils';
 import GridList from '../common/GridList';
 import Section from '../common/Section';
@@ -80,32 +79,26 @@ function BlogPosts({ data, pageContext }) {
     (edge) => !!edge.node.frontmatter.date,
   );
   return (
-    <>
-      <SEO
-        title={`Blog - Page ${currentPage} of ${pagesCount}`}
-        description={`Onur Önder's blog page ${currentPage} of ${pagesCount}`}
+    <Section title="Blog" titleComponent="h1">
+      <GridList>
+        {postEdges.map((edge) => (
+          <li key={edge.node.id}>
+            <BlogPostCard data={edge.node} />
+          </li>
+        ))}
+      </GridList>
+      <Pagination
+        {...{
+          isFirst,
+          prevPage,
+          pagesCount,
+          blogPrefix,
+          currentPage,
+          isLast,
+          nextPage,
+        }}
       />
-      <Section title="Blog" titleComponent="h1">
-        <GridList>
-          {postEdges.map((edge) => (
-            <li key={edge.node.id}>
-              <BlogPostCard data={edge.node} />
-            </li>
-          ))}
-        </GridList>
-        <Pagination
-          {...{
-            isFirst,
-            prevPage,
-            pagesCount,
-            blogPrefix,
-            currentPage,
-            isLast,
-            nextPage,
-          }}
-        />
-      </Section>
-    </>
+    </Section>
   );
 }
 

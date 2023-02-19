@@ -1,10 +1,10 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { IconButton, Stack } from '@mui/material';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import useSiteMetadata from '../seo/useSiteMetadata';
 
 function SocialAccountLink({ ['aria-label']: ariaLabel, url, icon }) {
   if (!url) {
@@ -27,21 +27,8 @@ function SocialAccountLink({ ['aria-label']: ariaLabel, url, icon }) {
 }
 
 function SocialAccounts() {
-  const { site } = useStaticQuery(graphql`
-    query SocialAccountsQuery {
-      site {
-        siteMetadata {
-          twitterUsername
-          linkedinUsername
-          githubUsername
-          mail
-        }
-      }
-    }
-  `);
-  const { siteMetadata } = site;
-  const { twitterUsername, githubUsername, linkedinUsername, mail } =
-    siteMetadata;
+  const { twitterUsername, linkedinUsername, mail, githubUsername } =
+    useSiteMetadata();
 
   return (
     <Stack spacing={0.5} direction="row" justifyContent="center">

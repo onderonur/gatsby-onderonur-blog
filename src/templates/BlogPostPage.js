@@ -2,6 +2,7 @@ import React from 'react';
 import BlogPost from '../modules/blog-post/BlogPost';
 import Layout from '../modules/layout/Layout';
 import { graphql } from 'gatsby';
+import SEO from '../modules/seo/SEO';
 
 export const pageQuery = graphql`
   query BlogPostQuery($route: String!) {
@@ -50,3 +51,17 @@ function BlogPostPage(props) {
 }
 
 export default BlogPostPage;
+
+export function Head({ location, data }) {
+  const { frontmatter, excerpt } = data.markdownRemark;
+
+  return (
+    <SEO
+      title={frontmatter.title}
+      description={frontmatter.description || excerpt}
+      imageSrc={frontmatter.featuredImage.childImageSharp.fluid.src}
+      pathname={location.pathname}
+      article
+    />
+  );
+}

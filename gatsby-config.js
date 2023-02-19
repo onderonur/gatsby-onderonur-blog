@@ -96,7 +96,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-react-helmet`,
     // https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/#using-google-fonts
     {
       resolve: `gatsby-omni-font-loader`,

@@ -17,7 +17,6 @@ function LatestBlogPosts() {
         edges {
           node {
             id
-            excerpt(pruneLength: 250)
             frontmatter {
               date(formatString: "MMMM DD, YYYY")
               title

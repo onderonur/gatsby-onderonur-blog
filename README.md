@@ -1,6 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/63521b78-612e-4a2f-a409-3fa8009e7f3b/deploy-status)](https://app.netlify.com/sites/frosty-perlman-9da1cb/deploys) &nbsp;
-
 # onderonur-blog
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/63521b78-612e-4a2f-a409-3fa8009e7f3b/deploy-status)](https://app.netlify.com/sites/frosty-perlman-9da1cb/deploys) &nbsp;
 
 Personal website and blog, built with [Gatsby][gatsby] and [Netlify CMS][netlifycms].  
 Live site is **[here](https://onderonur.netlify.app/)**.
@@ -21,13 +21,11 @@ Live site is **[here](https://onderonur.netlify.app/)**.
 ## 👌 Features
 
 - Personal website & blog
-- Responsive web design
+- Responsive design
 - Customize content pages
 - Add/modify/delete blog posts
-- Edit website settings
 - SEO optimization
-- OpenGraph structured data
-- Twitter Cards meta
+- Open Graph & Twitter meta tags
 - XML Sitemaps
 
 ## Development
@@ -40,7 +38,7 @@ npm start
 
 Your site is now running on `http://localhost:8000`!
 
-_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
 
 You can use Netlify CMS in you local just run `npx netlify-cms-proxy-server` and start run `gatsby develop`
 

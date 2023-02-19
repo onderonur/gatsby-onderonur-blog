@@ -19,7 +19,6 @@ const PageContent = styled('div')({
 function NotFound() {
   return (
     <Layout>
-      <SEO title="Page not found" />
       <PageContent>
         <Box marginBottom={6}>
           <header>
@@ -49,3 +48,7 @@ function NotFound() {
 }
 
 export default NotFound;
+
+export function Head({ location }) {
+  return <SEO title="Page not found" pathname={location.pathname} />;
+}
