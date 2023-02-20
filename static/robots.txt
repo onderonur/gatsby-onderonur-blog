@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://onderonur.netlify.app/sitemap.xml
+Sitemap: https://onderonur.netlify.app/sitemap/sitemap-index.xml

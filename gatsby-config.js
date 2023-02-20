@@ -115,7 +115,7 @@ module.exports = {
     },
 
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
