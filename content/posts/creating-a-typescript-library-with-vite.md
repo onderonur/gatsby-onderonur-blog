@@ -14,7 +14,7 @@ We are gonna create a simple utility package with a couple of functions. And it 
 
 **Note:** Here are the package versions used in this tutorial. When a new version is published, some of these may have breaking changes, change of best practices, have new options/usages etc. It is **always** nice to check the original documentation of the tools we are using every now and then.
 
-```
+```text
 "@types/node": "^18.14.0",
 "typescript": "^4.9.3",
 "vite": "^4.1.0",
@@ -23,7 +23,7 @@ We are gonna create a simple utility package with a couple of functions. And it 
 
 For testing with Jest:
 
-```
+```text
 "@types/jest": "^29.4.0",
 "jest": "^29.4.3",
 "ts-jest": "^29.0.5",
@@ -31,7 +31,7 @@ For testing with Jest:
 
 For testing with Vitest:
 
-```
+```text
 "vitest": "^0.28.5"
 ```
 
@@ -39,13 +39,13 @@ For testing with Vitest:
 
 First of all, we need to [create a new Vite project](https://vitejs.dev/guide/#scaffolding-your-first-vite-project). To accomplish this, we can run the following command:
 
-```
+```bash
 npm create vite@latest
 ```
 
 It will ask us some questions to create our project. We can set them like below:
 
-```
+```text
 Project name: my-ts-lib
 Select a framework: Vanilla
 Select a variant: TypeScript
@@ -53,7 +53,7 @@ Select a variant: TypeScript
 
 It will have a folder structure like this:
 
-```
+```text
 📦my-ts-lib
  ┣ 📂public
  ┃ ┗ 📜vite.svg
@@ -71,7 +71,7 @@ It will have a folder structure like this:
 
 We can delete `index.html`, `public` folder and all the files in `src`. In the end, it will look this this:
 
-```
+```text
 📦my-ts-lib
  ┣ 📂src
  ┣ 📜.gitignore
@@ -81,7 +81,7 @@ We can delete `index.html`, `public` folder and all the files in `src`. In the e
 
 Now, install the dependencies by using:
 
-```
+```bash
 npm install
 ```
 
@@ -127,7 +127,7 @@ Since we are gonna use some Node.js modules like `path`, we need no install `@ty
 
 We need these packages only for local development or testing our package. So we put them in our `devDependencies` by `--save-dev` or `-D` flag. For more information about `dependencies`, `devDependencies` and `peerDependencies`, we can check [npm Docs](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
 
-```
+```bash
 npm install -D @types/node vite-plugin-dts
 ```
 
@@ -175,13 +175,13 @@ Basically, we are pointing out the root of our package and where the types are (
 
 Now, we are ready to build our package and see the first result. Let's run the build command:
 
-```
+```bash
 npm run build
 ```
 
 It will create a `dist` folder at the root of our project and it will look like this:
 
-```
+```text
 📦dist
  ┣ 📜index.d.ts
  ┣ 📜my-lib.js
@@ -226,13 +226,13 @@ And lastly, we need to add a `files` field to `package.json` to indicate npm wha
 
 And now, we can run the following command to preview what our package will look like without publishing it:
 
-```
+```bash
 npm pack --dry-run
 ```
 
 [npm pack](https://docs.npmjs.com/cli/v7/commands/npm-pack) command helps us to preview what our package will include and its size when we publish it. `--dry-run` is optional here. If we don't use it and just run `npm pack`, it will also create a `.tgz` file which is what would be deployed on npm. We are just previewing our package without publishing it, yet. We can use this command at anytime to preview our package.
 
-```
+```bash
 npm notice 📦  my-ts-lib@0.0.0
 npm notice === Tarball Contents ===
 npm notice 1.1kB LICENSE
@@ -259,7 +259,7 @@ We have `dist` folder, `README.md`, `LICENSE` and `package.json` in our package.
 As we can see, our package version is `0.0.0` now. We might want to update our package version, especially as we add new features, make fixes or refactors. [Semantic Versioning](https://semver.org/) is a nice way to follow for this.
 We can use following commands to bump our package version:
 
-```
+```bash
 npm version patch
 # Bumps the patch number like 0.0.0 -> 0.0.1
 
@@ -282,13 +282,13 @@ We can use the good old [Jest](https://jestjs.io/) or [Vitest](https://vitest.de
 
 First, we need to install the packages required for testing.
 
-```
-npm i -D jest @types/jest ts-jest
+```bash
+npm install -D jest @types/jest ts-jest
 ```
 
 And we need to create a `jest.config.js` file to configure Jest to test our `ts` files.
 
-```
+```bash
 npx ts-jest config:init
 ```
 
@@ -330,13 +330,13 @@ test('subtracts two numbers', () => {
 
 Let's run our test and see if we're all good:
 
-```
+```bash
 npm test
 ```
 
 🎉🎉🎉
 
-```
+```bash
 Test Suites: 2 passed, 2 total
 Tests:       2 passed, 2 total
 ```
@@ -345,8 +345,8 @@ Tests:       2 passed, 2 total
 
 As the first step, we will install Vitest.
 
-```
-npm i -D vitest
+```bash
+npm install -D vitest
 ```
 
 Also, even if it's not required for this example, we can configure it in our `vite.config.ts`.
@@ -418,13 +418,13 @@ test('subtracts two numbers', () => {
 
 And we can run the tests to see if everything is fine.
 
-```
+```bash
 npm test
 ```
 
 🎉🎉🎉
 
-```
+```bash
 Test Files  2 passed (2)
      Tests  2 passed (2)
 ```
@@ -439,7 +439,7 @@ This tutorial will not be deep dive about how to set these up. Rules, plugins an
 
 But as a couple of advices, a fast way of setting ESLint up is using the following command:
 
-```
+```bash
 npx eslint --init
 ```
 
@@ -474,7 +474,7 @@ We are nearly there. We just need to add a couple of more fields to inform npm a
 
 And finally, we use [npm publish](https://docs.npmjs.com/cli/v8/commands/npm-publish) command and publish our package to npm:
 
-```
+```bash
 npm publish
 ```
 
