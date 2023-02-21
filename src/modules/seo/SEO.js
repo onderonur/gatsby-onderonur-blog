@@ -16,6 +16,7 @@ export default function SEO({
     siteUrl,
     twitterUsername,
     image,
+    googleSiteVerification,
   } = useSiteMetadata();
 
   let url = `${siteUrl}${pathname || ``}`;
@@ -39,10 +40,7 @@ export default function SEO({
       <link rel="canonical" href={seo.url} />
       <meta name="theme-color" content="#fff" />
 
-      <meta
-        name="google-site-verification"
-        content="nQgOxm5VNGFj7ASyvph9w0k05oxvl67a2Pt3V442MrQ"
-      />
+      <meta name="google-site-verification" content={googleSiteVerification} />
 
       <meta name="description" content={seo.description} />
 
