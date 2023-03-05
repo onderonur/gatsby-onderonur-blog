@@ -17,7 +17,7 @@ That’s enough for the introduction. Now we will talk about Context API and som
 
 This will be the most basic type of application that you can create instantly. Now open your editor, run the terminal and just run this command;
 
-```
+```bash
 npx create-react-app counter-app
 ```
 
@@ -140,7 +140,7 @@ export default useCounter;
 
 This is just a simple counter. Nothing fancy. Just create the files those are in the snippets and run
 
-```
+```bash
 npm start
 ```
 
@@ -398,7 +398,7 @@ If you’re familiar with the `selectors` of `redux` this feels like them. We ar
 
 Now run this command to install the package.
 
-```
+```bash
 npm install constate
 ```
 

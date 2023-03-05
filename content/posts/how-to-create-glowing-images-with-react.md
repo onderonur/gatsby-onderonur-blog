@@ -12,13 +12,13 @@ First of all, even though this tutorial is based on React and styled-components,
 
 Let's run the following command to create a new React app:
 
-```
+```bash
 npx create-react-app@latest glowing-images
 ```
 
 After the installation is done and our project is created, we can open it and install our dependencies.
 
-```
+```bash
 npm install styled-components
 ```
 
@@ -397,6 +397,6 @@ export default GlowingImage;
 
 You can check the live demo on [CodeSandbox](https://codesandbox.io/s/xnui7d):
 
-https://codesandbox.io/s/xnui7d
+<https://codesandbox.io/s/xnui7d>
 
 Thanks for reading!
