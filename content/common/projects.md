@@ -2,25 +2,13 @@
 projects:
   - title: remix-shows
     description: TV Show guide built with Remix
-    featuredImage: /assets/project-remixshows.png
+    featuredImage: /assets/project-remixshows.jpg
     demoUrl: https://remix-shows.netlify.app/
     sourceCodeUrl: https://github.com/onderonur/remix-shows
     techStack:
       - name: TypeScript
       - name: Remix
       - name: React
-  - title: Post Gallery
-    description: Full stack GraphQL web application that implements basic features
-      of 9GAG. Built with TypeScript, Next.js, Apollo Server, Apollo Client,
-      PostgreSQL
-    featuredImage: /assets/project-postgallery.jpg
-    sourceCodeUrl: https://github.com/onderonur/post-gallery
-    techStack:
-      - name: TypeScript
-      - name: Next.js
-      - name: React
-      - name: Apollo GraphQL
-      - name: PostgreSQL
   - title: TMDb Explorer
     description: A TMDb Explorer Application Created with Next.js
     featuredImage: /assets/project-tmdbexplorer.jpg
@@ -32,7 +20,7 @@ projects:
       - name: React
   - title: Next Shopper
     description: A simple e-commerce web application built with Next.js
-    featuredImage: /assets/project-nextshopper.png
+    featuredImage: /assets/project-nextshopper.jpg
     demoUrl: https://next-shopper.vercel.app/
     sourceCodeUrl: https://github.com/onderonur/next-shopper
     techStack:
@@ -40,10 +28,24 @@ projects:
       - name: Next.js
       - name: React
       - name: Tailwind CSS
+  - title: Post Gallery
+    description:
+      Full stack GraphQL web application that implements basic features
+      of 9GAG. Built with TypeScript, Next.js, Apollo Server, Apollo Client,
+      PostgreSQL
+    featuredImage: /assets/project-postgallery.jpg
+    sourceCodeUrl: https://github.com/onderonur/post-gallery
+    techStack:
+      - name: TypeScript
+      - name: Next.js
+      - name: React
+      - name: Apollo GraphQL
+      - name: PostgreSQL
   - title: RickQL
-    description: Client app for Rick and Morty API with TypeScript, Next.js, React &
+    description:
+      Client app for Rick and Morty API with TypeScript, Next.js, React &
       Apollo GraphQL
-    featuredImage: /assets/project-rickql.png
+    featuredImage: /assets/project-rickql.jpg
     demoUrl: https://rick-and-morty-graphql.vercel.app/
     sourceCodeUrl: https://github.com/onderonur/rick-and-morty-graphql
     techStack:
@@ -51,6 +53,16 @@ projects:
       - name: Next.js
       - name: React
       - name: Apollo GraphQL
+  - title: Code Image Generator
+    description: Create your code images by choosing different themes and visual settings.
+    demoUrl: https://onderonur.github.io/code-image-generator/
+    sourceCodeUrl: https://github.com/onderonur/code-image-generator
+    techStack:
+      - name: TypeScript
+      - name: Next.js
+      - name: React
+      - name: Tailwind CSS
+    featuredImage: /assets/project-codeimagegenerator.png
   - title: OnUrl
     description: URL Shortener created with Next.js, TypeScript, Mongoose
     featuredImage: /assets/project-onurl.png
@@ -74,7 +86,8 @@ projects:
       - name: Express.js
       - name: Socket.IO
   - title: Bubbly-Flask
-    description: Clone of my own project "bubbly", with a python (flask) API created
+    description:
+      Clone of my own project "bubbly", with a python (flask) API created
       with flask-socketio
     featuredImage: /assets/project-bubbly.png
     sourceCodeUrl: https://github.com/onderonur/bubbly-flask
@@ -93,7 +106,6 @@ projects:
       - name: Nuxt.js
       - name: Vue.js
       - name: Tailwind CSS
-        featuredImage: /assets/project-nuxtheroesandvillains.png
     featuredImage: /assets/project-nuxtheroesandvillains.png
   - title: svelte-github-explorer
     description: A simple Svelte app to explore users and their repositories on GitHub
@@ -110,8 +122,8 @@ projects:
     sourceCodeUrl: https://github.com/onderonur/onderonur-blog
     techStack:
       - name: JavaScript
-      - name: React
       - name: Gatsby
+      - name: React
       - name: Netlify CMS
   - title: drag-and-drop-taskboard
     description: Taskboard with drag'n drop feature. Built with React, TypeScript

@@ -36,7 +36,7 @@ export default function SEO({
   return (
     <>
       <title>{seo.title}</title>
-      <link rel="icon" href={`${siteUrl}/favicon`} />
+      <link rel="icon" href="/favicon.ico" />
       <link rel="canonical" href={seo.url} />
       <meta name="theme-color" content="#fff" />
 
