@@ -23,10 +23,10 @@
     "deploy": "npm run build && netlify deploy --prod && npm run clean"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.11",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.2",
     "gatsby": "^4.14.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^3.11.0",
@@ -53,17 +53,17 @@
     "react-intersection-observer-hook": "^2.1.1",
     "react-share": "^4.4.1",
     "react-vertical-timeline-component": "^3.6.0",
-    "slugify": "^1.6.5"
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "acorn": "^8.8.2",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "gatsby-plugin-material-ui": "^4.1.0",
     "netlify-cms-lib-widgets": "^1.6.0",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.8",
     "react-refresh": "^0.14.0"
   }
 }

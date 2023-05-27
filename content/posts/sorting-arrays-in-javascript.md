@@ -124,7 +124,7 @@ function compareDates(firstDate, secondDate) {
 }
 ```
 
-## string
+### string
 
 We know that `sort` method implicitly converts items to `string` and compares them. So, why do we think about `string` values if we already have this? Let's have a look:
 
@@ -166,7 +166,7 @@ console.log(users);
 
 _As a side note, if we have a big array to sort, it's better to use `Intl.Collator` in terms of performance._
 
-## Custom objects
+### Custom objects
 
 As we can see, we can compare items in an array as we want. So, comparing custom objects (or class instances etc.) are no different.
 
