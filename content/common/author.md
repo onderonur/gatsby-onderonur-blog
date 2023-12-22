@@ -4,14 +4,14 @@ tagline: Frontend Developer
 featuredImage: /assets/me.jpg
 ---
 
-Hi! I'm Onur Önder. Glad to see you here!
+Hello, I'm Onur, a Software Engineer from İzmir, Turkey.
 
-I'm a software developer from İzmir, Turkey. Between 2009 and 2013, I gained a great interest in programming during my education at Ege University Civil Engineering Department and after my graduation. In 2015, I started Ege University Computer Engineering Department in order to turn this interest into a professional gain and graduated in 2018.
+My journey into the world of programming began during my time at Ege University's Civil Engineering Department from 2009 to 2013, where I discovered a deep passion for coding. This enthusiasm continued to grow even after my graduation. In 2015, I took a significant step towards turning this interest into a profession by enrolling in the Computer Engineering Department at Ege University, successfully completing my degree in 2018.
 
-At Arkas Holding - Bimar, where I started working as an intern in the last year of my university life, I continued to work for 4 years until I became a mid-level software developer. At Bimar, I took a role in the development of enterprise web and mobile applications with the help of technologies/tools such as TypeScript, JavaScript, React, React Native, .NET Core, MSSQL, Git, Azure and Azure DevOps in a team that follows the Agile/Scrum methodologies.
+In my role at Arkas Holding, where I initially started as an intern during the final year of my education, I dedicated four years to growing as a software developer. Progressing from an intern to a mid-level software developer, I actively contributed to the collaborative development of enterprise web and mobile applications. I gained experience with various technologies such as TypeScript, JavaScript, React, React Native, .NET Core, MSSQL, Git, Azure, and Azure DevOps within a team that followed Agile-Scrum methodologies.
 
-As of September 2021, I started to work as a Frontend Developer in the web team of Getir. I'm mostly working on JavaScript, TypeScript, React, Next.js and similar frontend technologies.
+In September 2021, I transitioned to a new opportunity at Getir as a Frontend Developer in the Web Team. There, I gained more experience with TypeScript, JavaScript, React, Next.js, and similar frontend technologies. Subsequently, I joined the GetirLocals Disco team, where I continued to contribute to the improvement of the GetirLocals web experience.
 
-In my spare time, I contribute to my own development by carrying out projects with technologies such as Node.js (Express, Next.js, Socket.IO etc.), GraphQL, and I try to take part in the open-source community by publishing these projects on GitHub and npm.
+In September 2022, I took on the role of Senior Frontend Developer at Delivery Hero. As a member of the Web Fundamentals team, I focused on various web-related aspects, including SEO improvements, UI/UX developments, monitoring and CI/CD enhancements for websites running in 20 countries, all built on a microfrontend architecture.
 
-I also develop small-scale projects in languages ​​such as Python and Go, as I believe that experiencing different frameworks and programming languages ​​can bring different perspectives to a software developer.
+In my free time, I actively contribute to my professional growth by working on hobby projects. I am dedicated to participating in the open-source community by sharing these projects on GitHub and npm. I have multiple open source npm packages and demo projects to grow my knowledge on various topics such as Node.js, Next.js, Remix, various styling solutions (e.g., Tailwind CSS, styled-components, Emotion), GraphQL, Vue and Svelte.
