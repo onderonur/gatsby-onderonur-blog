@@ -1,4 +1,7 @@
-# onderonur-blog
+# gatsby-onderonur-blog
+
+> [!NOTE]
+> You can find the new repository here: [onderonur/onderonur-blog](https://github.com/onderonur/onderonur-blog)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/63521b78-612e-4a2f-a409-3fa8009e7f3b/deploy-status)](https://app.netlify.com/sites/frosty-perlman-9da1cb/deploys) &nbsp;
 
